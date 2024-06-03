@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!-- login crendentials -->
+
+<!-- email id: admin@bharuwasolutions.com
+password: admin@123 -->
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
