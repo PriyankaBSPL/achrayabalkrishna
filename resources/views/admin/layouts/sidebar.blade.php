@@ -32,6 +32,12 @@
            </a>
          </li>
 
+         <li class="nav-item">
+           <a href="{{url('/admin/menu')}}" class="nav-link">
+             <i class="nav-icon fas fa-th"></i>
+             <p>Menu</p>
+           </a>
+         </li>
 
        </ul>
      </nav>
