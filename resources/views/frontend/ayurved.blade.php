@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
+
+
 
 <body>
    <section class="internal-banner">
-      <h1>Ayurved</h1>
+      <h1>{{$title}}</h1>
    </section>
    <section>
       <div class="container">
@@ -27,7 +28,7 @@
                   articulated accordingly.</p>
             </div>
             <div class="col-md-6">
-               <img src="assets/img/keshri-ayurved.webp" class="img-fluid" alt="">
+               <img src="{{URL::asset('frontend/assets/img/keshri-ayurved.webp')}}" class="img-fluid" alt="">
             </div>
 
          </div>
@@ -61,7 +62,7 @@
       <div class="container">
          <div class="row align-items-center">
             <div class="col-md-6">
-               <img src="assets/img/ayurved-stock.jpg" class="img-fluid" alt="">
+               <img src="{{URL::asset('frontend/assets/img/ayurved-stock.jpg')}}" class="img-fluid" alt="">
             </div>
             <div class="col-md-6 ayurved-right">
                <p>Ayurveda not only includes ways of life, good conduct, moral values, and behaviour, but also gives
@@ -94,9 +95,9 @@
                proving the established facts and knowledge described in the Ayurveda. They are not proving Ayurveda but
                they are re-establishing Ayurveda. With all these efforts we are sure that Indian tradition of medicine
                will soon recognized all over the world.</p>
-            <img src="assets/img/Acharya_balkrishna_signatur.png" alt="" style="float:right;width:180px;">
+            <img src="{{URL::asset('frontend/assets/img/Acharya_balkrishna_signatur.png')}}" alt="" style="float:right;width:180px;">
          </div>
       </div>
    </section>
-   <?php include_once ("footer.php"); ?>
-</body>
+   </body>
+    @endsection

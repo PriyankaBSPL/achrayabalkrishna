@@ -9,19 +9,18 @@ use App\Models\Admin\Menu;
 class IndexController extends Controller
 {
     public function index($slug="",Request $request){
-    //   print_r($slug);exit;
         $slug= clean_single_input($slug);
-        if($slug=='Frontend'){
+        if($slug==''){
                 return redirect('/');  
         }
         $data =  Menu::where('slug', $slug)->where('status',3)->first();
         $title=$data->title;
+        $banner_image=$data->banner_image;
         if(!empty($data)){
             if($slug==$data->slug){
-                return response()->view("frontend/$data->slug",compact('title')); 
+                return response()->view("frontend/$data->slug",compact('title','banner_image')); 
             }
         }
-   
 
     }
 }

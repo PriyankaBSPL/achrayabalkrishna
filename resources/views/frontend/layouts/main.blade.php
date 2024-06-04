@@ -62,23 +62,22 @@
 </div>
 <nav id="navbar" class="navbar sticky-top nav-scrolled">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-        <a href="index.php" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="" class="logo">
+        <a href="{{url('/')}}" class="logo d-flex align-items-center">
+            <img src="{{URL::asset('frontend/assets/img/logo.png')}}" alt="" class="logo">
             <span>Acharya Balkrishna</span>
         </a>
         <ul>
     @foreach (getMenuData(0) as $menuItem)
         <li class="{{ $menuItem->subMenu && $menuItem->subMenu->count() > 0 ? 'dropdown' : '' }}">
-            <a href="{{ url('pages/'.$menuItem->slug) }}"><span>{{ $menuItem->title }}</span></a>
+            <a href="{{($menuItem->slug=='#')?url('#'): url('pages/'.$menuItem->slug) }}"><span>{{ $menuItem->title }}</span></a>
             @if($menuItem->subMenu && $menuItem->subMenu->count() > 0)
                 <ul>
                     @foreach (getMenuData($menuItem->id) as $child)
                         @if($menuItem->type == 'Publication')
                         <a href="{{ url('publication/'.$child->slug.'/'.$child->id) }}">{{ $child->title }}</a>
                         @else
-                        <a href="{{ url('pages/'.$child->slug) }}">{{ $child->title }}</a>
+                        <a href="{{ ($child->slug=='#')?url('#'):url('pages/'.$child->slug) }}">{{ $child->title }}</a>
                         @endif
-                        
                     @endforeach
                 </ul>
 
@@ -88,47 +87,7 @@
 </ul>
 
             </li>
-            <li class="dropdown"><a href="#"><span>Profiles</span></a>
-                <ul>
-                    <li><a href="corporate.php">Corporate</a></li>
-                    <li><a href="education.php">Education & Research</a></li>
-                    <li><a href="media-publication.php">Media & Publication</a></li>
-                    <li><a href="social.php">Social</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a href="#"><span>Vision</span></a>
-                <ul>
-                    <li><a href="ayurved.php">Ayurved</a></li>
-                    <li><a href="yoga.php">Yoga</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a href="#"><span>CSR</span></a>
-                <ul>
-                    <li><a href="local.php">Local</a></li>
-                    <li><a href="#">National</a></li>
-                    <li><a href="global.php">Global</a></li>
-                </ul>
-            </li>
-            <li class="dropdown"><a href="#"><span>Gallery</span></a>
-                <ul>
-                    <li><a href="image-gallery.php">Image Gallery</a></li>
-                    <li><a href="#">Video Gallery</a></li>
-                </ul>
-            </li>
-            <li><a href="research-papers.php">Research</a></li>
-            <li class="dropdown"><a href="#"><span>Publication</span></a>
-                <ul>
-                    <li><a href="books.php">Ayurveds Books</a></li>
-                    <li><a href="#">Ancient Indian Treatises / Manuscripts</a></li>
-                    <li><a href="#">Cookery</a></li>
-                    <li><a href="#">School Books</a></li>
-                    <li><a href="#">Spiritual/Self help/General</a></li>
-                    <li><a href="#">Yoga</a></li>
-                </ul>
-            </li>
-
-            <li><a class="nav-link scrollto" href="contact.php">Contact Us</a></li>
-        </ul>
+         
 
         <i class="bi bi-list mobile-nav-toggle"></i>
     </div>

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
+
 
 <body>
     <section class="internal-banner">
-    <h1>Social</h1>
+    <h1>{{$title}}</h1>
     </section>
 <section class="yogpeeth-slide">
          <div class="container">
@@ -16,7 +16,7 @@
                               <p>With revered blessings of Swami Ramdev ji and Acharya Balkrishan ji, Patanjali Yogpeeth (Trust) came into existence on February 4, 2005 with a prime objective of establishing Yoga and Ayurveda and letting it blinking on the world map, study and ancient research of the Vedic tradition of Yoga & Ayurveda, and for conducting activities at the breadth and length of the spectrum and to launch various projects related to Yoga & Ayurveda. The Trust manages almost all the Yoga & Ayurveda activities. Patanjali Yogpeeth have well equipped Ayurveda Hospital at its premises consisting of various departments wise.</p>
              </div>
  <div class="col-md-6">
-                    <img src="assets/img/Ptanjali-yogpeeth.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/Ptanjali-yogpeeth.webp')}}" class="img-fluid" alt="">
                 </div>
              <div class="row">
                   <div class="col-md-4">
@@ -237,7 +237,7 @@
                 
                <div class="row corporate-slide align-items-center divya-slide">
              <div class="col-md-4 divy-mdir-img">
-                    <img src="assets/img/Divyayog-Mandir-Trust.jpg" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/Divyayog-Mandir-Trust.jpg')}}" class="img-fluid" alt="">
                 </div>
                           <div class="col-md-8">
                               <h3>Divya Yog Mandir (Trust)</h3>
@@ -260,7 +260,7 @@
                  <p>A Gaushala at Gurukul Gaushala Farms, where approx 500 cows of good breed such as Rathi, Sahiwal, Red Sindhi, Haryana, Tharparkar, Gir etc. have been housed. Various Cow products including cow milk, dung and urine are needed for preservation, improvisation and manufacture of Ayurvedic. The dung obtained from Gaushala is being used as compost manure and bio-technical manure for organic food grains, fruits, vegetables. Biogas is also produced from dung and other refuses which fulfils the cooking needs of Ashram. The domestic cattle breed such as Rathi, Sahiwal, Red Sindhi, Haryana, Tharparkar, Gir are being used to improve the breeds. The Gaushala premises are about in 50 Acres. Bigger size biogas plant waste converting machine, urine distillation units have also been pressed into service in the farm. The units for assessing and utilizing bullock power, Panchgavya Research & Training Centreare also functional at the farm site.</p>
                  </div>
                        <div class="col-md-6">
-                    <img src="assets/img/cow-img.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/cow-img.webp')}}" class="img-fluid" alt="">
                 </div>
                 <p>The work for the preservation, improvisation and manufacture of medicines requires cow milk, cow urine, dung, and preservation of Indian cattle breeds (especially cows and bullocks), is going on since long in the ashram. Now greater attention is being given a broader the sphere.</p>
                   </div>
@@ -289,13 +289,10 @@
                     <p>This Trust has been established under guidance and direction from Acharya Balkrishan ji with the sole aim to self-employment and eradicate misery in the villages especially promoting women employment in the villages and to improve the living standard through locally available resources such cattle generated resources, Bee keeping and herbal farming and organic cultivation practices.</p>
                 </div>
                  <div class="col-md-6">
-                    <img src="assets/img/gramodhyog.jpg" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/gramodhyog.jpg')}}" class="img-fluid" alt="">
                 </div>
                   </div>
              </div>
              </section>
-                
-                  
-                
-    <?php include_once ("footer.php"); ?>
-</body>
+             </body>
+    @endsection

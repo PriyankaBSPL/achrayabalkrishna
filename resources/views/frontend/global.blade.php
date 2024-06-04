@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
-
+@extends('frontend.layouts.main')
+@section('content')
 <body>
     <section class="internal-banner">
-        <h1>Global</h1>
+        <h1>{{$title}}</h1>
     </section>
 
 
@@ -21,11 +19,11 @@
                 </div>
 
                 <div class="col-md-6">
-                    <img src="assets/img/nepal_earth.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/nepal_earth.webp')}}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
     </section>
 
-    <?php include_once ("footer.php"); ?>
-</body>
+    </body>
+  @endsection

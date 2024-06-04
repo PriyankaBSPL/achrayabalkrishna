@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
 
 <body>
 <section class="internal-banner">
@@ -12,7 +11,7 @@
             <div class="row">
                 <div class="col-lg-4  col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/gallery/dikshant-samaroh.jpg" class="img-fluid" alt=""
+                        <img src="{{URL::asset('frontend/assets/img/gallery/dikshant-samaroh.jpg')}}" class="img-fluid" alt=""
                             data-pagespeed-url-hash="3894721446"
                             onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                         <div class="portfolio-info">
@@ -276,5 +275,5 @@
         </div>
     </section>
 
-    <?php include_once ("footer.php"); ?>
-</body>
+    </body>
+  @endsection

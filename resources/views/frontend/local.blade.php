@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
 
 <body>
     <section class="internal-banner">
-        <h1>Local</h1>
+    <h1>{{$title}}</h1>
     </section>
 
 
@@ -17,7 +16,7 @@
 
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="assets/img/yog.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/yog.webp')}}" class="img-fluid" alt="">
                 </div>
 
                 <div class="col-md-6">
@@ -138,7 +137,7 @@
 
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="assets/img/local/ashram.webp" class="" alt="" width="100%">
+                    <img src="{{URL::asset('frontend/assets/img/local/ashram.webp')}}" class="" alt="" width="100%">
                 </div>
 
                 <div class="col-md-6">
@@ -182,14 +181,14 @@
                 </div>
 
                 <div class="col-md-6">
-                    <img src="assets/img/local/valmiki.webp" class="" alt="" width="100%">
+                    <img src="{{URL::asset('frontend/assets/img/local/valmiki.webp')}}" class="" alt="" width="100%">
                 </div>
             </div>
 
             <div class="row">
 
                 <div class="col-md-6">
-                    <img src="assets/img/local/santravidash.jpg" class="" alt="" width="100%">
+                    <img src="{{URL::asset('frontend/assets/img/local/santravidash.jpg')}}" class="" alt="" width="100%">
                 </div>
 
                 <div class="col-md-6">
@@ -226,11 +225,10 @@
                 </div>
 
                 <div class="col-md-6">
-                    <img src="assets/img/local/yag.webp" class="" alt="" width="100%">
+                    <img src="{{URL::asset('frontend/assets/img/local/yag.webp')}}" class="" alt="" width="100%">
                 </div>
             </div>
         </div>
     </section>
-
-    <?php include_once ("footer.php"); ?>
-</body>
+    </body>
+  @endsection

@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
+
+
 
 <body>
     <section class="internal-banner">
-    <h1>Yoga</h1>
+    <h1>{{$title}}</h1>
     </section>
 <section>
          <div class="container">
@@ -16,7 +17,7 @@
                <p>The main aim of Ayurveda is to promote health, prevention and treatment of chronic and dreadful diseases. For protection, various sages focused on formula derived from various herbs that can give immediate relief to the human being. According to Ayurveda no ailment can be exclusively physical or psychological. Physical illness affects psychologically and psychological diseases impact living beings physically. For this reason, Ayurveda considers all diseases as psycho-somatic and treat is articulated accordingly.</p>
                 </div>
  <div class="col-md-6">
-                    <img src="assets/img/ayuevda-img.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/ayuevda-img.webp')}}" class="img-fluid" alt="">
                 </div>
                  
                 </div>
@@ -38,7 +39,7 @@
          <div class="container">
             <div class="row align-items-center">
                  <div class="col-md-6">
-                    <img src="assets/img/ayurved-A.jpg" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/ayurved-A.jpg')}}" class="img-fluid" alt="">
                 </div>
                      <div class="col-md-6 ayurved-right">
                 <p>Ayurveda not only includes ways of life, good conduct, moral values, and behaviour, but also gives precautions for breaking the code of conduct, attitude and behaviour. Concept like socialism, nationalism, spiritualism and globalism makes Ayurveda a comprehensive science. Ayurveda guides a person to lead a disciplined and bountiful life with prescribed activities like prevention from immoral conduct. Ayurveda also covers the general behaviour in the life, whom to befriend, whom to avoid, how to speak and how much to speak, and how to lead a natural life. Ayurveda teaches us to lead a life free of ego, helps the people in their suffering, and sharing joy and sorrow with others. Thus, Ayurveda is a way of life, and a complete science and philosophy.</p>
@@ -49,9 +50,9 @@
                
                 <p>Since there are developments within Ayurveda during its long and varied history, the addition of new theories and practices of established ones, their interrelations and the interweaving of medical thought with constantly mutating religious, political, and cultural climates, form a rich and complicated pattern of medical and social history. But all the development does not mean that Ayurveda has lost its relevance in the present times.</p>
                <p>In the present scenario, with increasing complexity of life,  new and dreadful diseases, we need to explore more the ancient scriptures. We still find the persons who are refused treatment with the modern system due to non-availability of a cure. Iyt is often seen that these prople then they move to the traditional methods. The research and developmental actives in the field of medical science are still proving the established facts and knowledge described in the Ayurveda. They are not proving Ayurveda but they are re-establishing Ayurveda. With all these efforts we are sure that Indian tradition of medicine will soon recognized all over the world.</p>
-                 <img src="assets/img/Acharya_balkrishna_signatur.png" alt="" style="float:right;width:180px;">
+                 <img src="{{URL::asset('frontend/assets/img/Acharya_balkrishna_signatur.png')}}" alt="" style="float:right;width:180px;">
                 </div>
                 </div>
                 </section>
-    <?php include_once ("footer.php"); ?>
-</body>
+                </body>
+    @endsection

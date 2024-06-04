@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
+
 
 <body>
     <section class="internal-banner">
-    <h1>Media & Publication</h1>
+    <h1>{{$title}}</h1>
     </section>
 <section>
          <div class="container">
@@ -16,7 +16,7 @@
                               <p>Vedic Broadcasting limited is also part of Acharya Balkrishna’s vision. It is a pioneer & leading socio-cultural network in India. Astha & Astha Bhajan Channels propagate Indian culture, heritage, Health, ayurveda, education, yoga, values, morals, devotional songs, spiritual conferences, talks, etc. The channels is available globally, beaming over Asia, Africa, Australia, Europe and North America (USA & Canada), thus, presenting an opportunity to reach followers and other viewers worldwide.</p>
              </div>
  <div class="col-md-4">
-                    <img src="assets/img/Aastha-channel.jpg" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/Aastha-channel.jpg')}}" class="img-fluid" alt="">
                 </div>
             
                 </div>
@@ -28,7 +28,7 @@
                 
                <div class="row corporate-slide align-items-center">
              <div class="col-md-3">
-                    <img src="assets/img/yog-sandesh.jpg" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/yog-sandesh.jpg')}}" class="img-fluid" alt="">
                 </div>
                           <div class="col-md-9">
                               <h3>Yog Sandesh</h3>
@@ -41,5 +41,5 @@
                   </section>
                     
                 
-    <?php include_once ("footer.php"); ?>
-</body>
+                  </body>
+    @endsection
