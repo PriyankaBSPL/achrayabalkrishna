@@ -15,9 +15,17 @@ return new class extends Migration
             $table->id();
             $table->string('publication_type');
             $table->string('title');
-            $table->string('image');
             $table->string('language');
-            $table->string('url');
+            $table->string('image');
+            $table->string('author');
+            $table->string('category');
+            $table->string('publisher');
+            $table->string('isbn');
+            $table->string('pages');
+            $table->string('country');
+            $table->string('buynow_link');
+            $table->longtext('description');
+            $table->string('cover_type');
             $table->timestamps();
         });
     }

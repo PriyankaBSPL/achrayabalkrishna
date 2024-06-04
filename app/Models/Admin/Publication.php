@@ -17,6 +17,19 @@ class Publication extends Model
         'tile',
         'image',
         'language',
-        'url',
+        'author',
+        'category',
+        'publisher',
+        'isbn',
+        'pages',
+        'country',
+        'buynow_link',
+        'description',
+        'cover_type',
     ];
+
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class, 'publication_type', 'id');
+    }
 }
