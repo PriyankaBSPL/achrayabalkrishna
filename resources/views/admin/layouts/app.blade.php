@@ -4,12 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Samriddha Gram Dashboard</title>
+    <title>Acharyabal Krishna</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
@@ -17,21 +15,15 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{URL::asset('/admin/dist/css/adminlte.min.css')}}">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
-     
+     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script> 
      <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"> --> 
 </head>
-
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-
         @include('admin.layouts.header')
-
         @include('admin.layouts.sidebar')
-
         @yield('content')
-
         @include('admin.layouts.footer')
     </div>
 </body>

@@ -1,33 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
-
+@extends('frontend.layouts.main')
+@section('content')
 <body>
   <section class="home-banner">
-    <img src="assets/img/banner-A.webp" class="d-block w-100" alt="...">
+    <img src="{{URL::asset('frontend/assets/img/banner-A.webp')}}" class="d-block w-100" alt="...">
   </section>
-  <!-- ======= Hero Section ======= -->
-  <!--<section id="hero" class="hero">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="assets/img/banner-A.webp" class="d-block w-100" alt="...">
-        </div>
-       
-      </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-  </section>-->
+ 
 
   <main id="main">
     <!-- ======= About Section ======= -->
@@ -44,10 +21,10 @@
     <section class="about">
 
       <div class="container">
-        <img class="bg-about" src="assets/img/bg-image/bg-2.png">
+        <img class="bg-about" src="{{URL::asset('frontend/assets/img/bg-image/bg-2.png')}}">
         <div class="row">
           <div class="col-lg-6 d-flex align-items-center abt-img">
-            <img src="assets/img/about.png" class="img-fluid" alt="">
+            <img src="{{URL::asset('frontend/assets/img/about.png')}}" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center">
@@ -86,53 +63,53 @@
 
         <div class="swiper mySwiper mt-4">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="assets/img/melissa.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/melissa.png')}}">
               <h3>Ashwagandha</h3>
             </div>
 
-            <div class="swiper-slide"><img src="assets/img/cypress.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/cypress.png')}}">
               <h3>Cumin</h3>
 
             </div>
-            <div class="swiper-slide"><img src="assets/img/patchouli.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/patchouli.png')}}">
               <h3>Manjistha</h3>
             </div>
 
-            <div class="swiper-slide"><img src="assets/img/black-pepper.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
               <h3>Boswellia</h3>
             </div>
 
-            <div class="swiper-slide"><img src="assets/img/melissa.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/melissa.png')}}">
               <h3>Licorice root</h3>
             </div>
 
-            <div class="swiper-slide"><img src="assets/img/cypress.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/cypress.png')}}">
               <h3>Brahmi</h3>
 
             </div>
-            <div class="swiper-slide"><img src="assets/img/patchouli.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/patchouli.png')}}">
               <h3>Ajwain</h3>
             </div>
 
-            <div class="swiper-slide"><img src="assets/img/black-pepper.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
               <h3>Turmeric</h3>
             </div>
-            <div class="swiper-slide"><img src="assets/img/black-pepper.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
               <h3>Neem</h3>
             </div>
-            <div class="swiper-slide"><img src="assets/img/black-pepper.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
               <h3>Cardamom</h3>
             </div>
-            <div class="swiper-slide"><img src="assets/img/black-pepper.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
               <h3>Bitter melon</h3>
             </div>
-            <div class="swiper-slide"><img src="assets/img/black-pepper.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
               <h3>Gotu kola</h3>
             </div>
-            <div class="swiper-slide"><img src="assets/img/black-pepper.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
               <h3>Triphala</h3>
             </div>
-            <div class="swiper-slide"><img src="assets/img/black-pepper.png">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
               <h3>Precautions </h3>
             </div>
           </div>
@@ -157,31 +134,31 @@
         <div class="colab mt-5">
           <div class="wrapper">
             <ul class="owl-carousel">
-              <li><img src="assets/img/books/2.png" alt="">
+              <li><img src="{{URL::asset('frontend/assets/img/books/2.png')}}" alt="">
 
               </li>
-              <li><img src="assets/img/books/3.png" alt="">
+              <li><img src="{{URL::asset('frontend/assets/img/books/3.png')}}" alt="">
 
               </li>
-              <li><img src="assets/img/books/4.png" alt="">
+              <li><img src="{{URL::asset('frontend/assets/img/books/4.png')}}" alt="">
 
               </li>
-              <li><img src="assets/img/books/6.webp" alt="">
+              <li><img src="{{URL::asset('frontend/assets/img/books/6.webp')}}" alt="">
 
               </li>
-              <li><img src="assets/img/books/7.png" alt="">
+              <li><img src="{{URL::asset('frontend/assets/img/books/7.png')}}" alt="">
 
               </li>
-              <li><img src="assets/img/books/8.webp" alt="">
+              <li><img src="{{URL::asset('frontend/assets/img/books/8.webp')}}" alt="">
 
               </li>
-              <li><img src="assets/img/books/9.png" alt="">
+              <li><img src="{{URL::asset('frontend/assets/img/books/9.png')}}" alt="">
 
               </li>
-              <li><img src="assets/img/books/10.png" alt="">
+              <li><img src="{{URL::asset('frontend/assets/img/books/10.png')}}" alt="">
 
               </li>
-              <li><img src="assets/img/books/11.jpg" alt="">
+              <li><img src="{{URL::asset('frontend/assets/img/books/11.jpg')}}" alt="">
 
               </li>
             </ul>
@@ -208,7 +185,7 @@
           <div class="col-md-4">
             <div class="card" id="card-1">
               <div class="card-img">
-                <img src="assets/img/awards/Abhinav-Sushruta.jpeg" class="img-fluid">
+                <img src="{{URL::asset('frontend/assets/img/awards/Abhinav-Sushruta.jpeg')}}" class="img-fluid">
               </div>
               <div class="card-body">
 
@@ -223,7 +200,7 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="assets/img/awards/award-litrature.webp" class="img-fluid">
+                    <img src="{{URL::asset('frontend/assets/img/awards/award-litrature.webp')}}" class="img-fluid">
                   </div>
 
                   <div class="card-body">
@@ -237,7 +214,7 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="assets/img/awards/award.jpg" class="img-fluid">
+                    <img src="{{URL::asset('frontend/assets/img/awards/award.jpg')}}" class="img-fluid">
                   </div>
 
                   <div class="card-body">
@@ -253,7 +230,7 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="assets/img/awards/Champions-of-Change-Award.jpg" class="img-fluid">
+                    <img src="{{URL::asset('frontend/assets/img/awards/Champions-of-Change-Award.jpg')}}" class="img-fluid">
                   </div>
 
                   <div class="card-body">
@@ -267,7 +244,7 @@
               <div class="col-md-6">
                 <div class="card">
                   <div class="card-img">
-                    <img src="assets/img/awards/Lokmanya-Matrubhumi-Pursakar.webp" class="img-fluid">
+                    <img src="{{URL::asset('frontend/assets/img/awards/Lokmanya-Matrubhumi-Pursakar.webp')}}" class="img-fluid">
                   </div>
 
                   <div class="card-body">
@@ -301,7 +278,7 @@
             <ul class="owl-carousel">
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/1.jpg" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/1.jpg')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -316,7 +293,7 @@
               </li>
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/2.jpg" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/2.jpg')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -329,7 +306,7 @@
               </li>
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/1.jpg" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/1.jpg')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -343,7 +320,7 @@
               </li>
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/4.png" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/4.png')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -356,7 +333,7 @@
               </li>
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/3.jpg" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/3.jpg')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -371,7 +348,7 @@
               </li>
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/5.jpg" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/5.jpg')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -385,7 +362,7 @@
 
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/8.jpg" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/8.jpg')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -400,7 +377,7 @@
               </li>
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/6.webp" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/6.webp')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -416,7 +393,7 @@
 
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/9.jpg" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/9.jpg')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -432,7 +409,7 @@
 
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/11.webp" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/11.webp')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -448,7 +425,7 @@
 
               <li>
                 <div class="card">
-                  <img src="assets/img/updates/10.jpg" class="img-fluid">
+                  <img src="{{URL::asset('frontend/assets/img/updates/10.jpg')}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
@@ -603,9 +580,5 @@
     </section>
 
   </main><!-- End #main -->
-
-  <?php include_once ("footer.php"); ?>
-
 </body>
-
-</html>
+  @endsection

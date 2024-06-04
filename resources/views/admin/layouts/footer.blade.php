@@ -3,7 +3,7 @@
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      SAMRIDDHA GRAM
+    Acharya Balkrishna
     </div>
     <!-- Default to the left -->
     <strong>© 2022 All Rights Reserved. Developed By Bharuwa Solution Pvt. Ltd</strong>.

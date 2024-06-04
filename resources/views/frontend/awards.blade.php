@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
 
 <body>
    <section class="internal-banner">
-    <h1>AWARDS</h1>
+    <h1>{{$title}}</h1>
     </section>
 
  
@@ -13,7 +12,7 @@
         <div class="timeline">
             <div class="container left mt-0">
                 <div class="date">09th Dec<br> 2023</div>
-                <div class="award-img"><img src="assets/img/awards/award.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/award.jpg')}}"></div>
                 <div class="content">
                     <h3>Degree of Doctor of Philosophy (Honoris Causa)</h3>
                     <p>
@@ -26,7 +25,7 @@
             </div>
             <div class="container right">
                 <div class="date">17th June<br> 2023</div>
-                <div class="award-img"><img src="assets/img/awards/award-litrature.webp"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/award-litrature.webp')}}"></div>
                 <div class="content">
                     <h3>Doctor of Literature (D. Litt.)</h3>
                     <p>
@@ -37,7 +36,7 @@
             </div>
             <div class="container left">
                 <div class="date">19th Feb <br>2023</div>
-                <div class="award-img"><img src="assets/img/awards/Lokmanya-Matrubhumi-Pursakar.webp"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Lokmanya-Matrubhumi-Pursakar.webp')}}"></div>
                 <div class="content">
                     <h3>Lokmanya Matrubhumi Pursakar</h3>
                     <p>
@@ -50,7 +49,7 @@
             </div>
             <div class="container right">
                 <div class="date">21st Jan<br> 2023</div>
-                <div class="award-img"><img src="assets/img/awards/Pandit-Shiv-Sharma-Oration-Award.webp"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Pandit-Shiv-Sharma-Oration-Award.webp')}}"></div>
                 <div class="content">
                     <h3>International Oration and Award</h3>
                     <p>
@@ -64,7 +63,7 @@
             </div>
             <div class="container left">
                 <div class="date">15th Oct<br>2022</div>
-                <div class="award-img"><img src="assets/img/awards/Abhinav-Sushruta.jpeg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Abhinav-Sushruta.jpeg')}}"></div>
                 <div class="content">
                     <h3>Abhinav Sushruta Samman</h3>
                     <p>
@@ -76,7 +75,7 @@
             </div>
             <div class="container right">
                 <div class="date">16th April<br>2022</div>
-                <div class="award-img"><img src="assets/img/awards/Vikramaditya-Rashtra-Vibhuti-Samman.webp"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Vikramaditya-Rashtra-Vibhuti-Samman.webp')}}"></div>
 
                 <div class="content">
                     <h3>Vikramaditya Rashtra Vibhuti Samman</h3>
@@ -91,7 +90,7 @@
 
             <div class="container left">
                 <div class="date">20th Jan<br>2020</div>
-                <div class="award-img"><img src="assets/img/awards/Champions-of-Change-Award.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Champions-of-Change-Award.jpg')}}"></div>
                 <div class="content">
                     <h3>Champions of Change Award</h3>
                     <p>
@@ -107,7 +106,7 @@
             <div class="container right">
                 <div class="date">25 May<br>2019</div>
                 <div class="award-img"><img
-                        src="assets/img/awards/UNSDG-10-Most-Influential-People-in-Healthcare-Award.jpg"></div>
+                        src="{{URL::asset('frontend/assets/img/awards/UNSDG-10-Most-Influential-People-in-Healthcare-Award.jpg')}}"></div>
 
                 <div class="content">
                     <h3>UNSDG 10 Most Influential People in Healthcare Award</h3>
@@ -121,7 +120,7 @@
 
             <div class="container left">
                 <div class="date">2019</div>
-                <div class="award-img"><img src="assets/img/awards/wellness_impact_global_2019.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/wellness_impact_global_2019.jpg')}}"></div>
                 <div class="content">
                     <h3>Best Wellness Impact Global 2019</h3>
                     <p>
@@ -134,7 +133,7 @@
 
             <div class="container right">
                 <div class="date">01 Feb<br>2019</div>
-                <div class="award-img"><img src="assets/img/awards/2_Degree_of_Doctor_of_Letters_D-Litt.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/2_Degree_of_Doctor_of_Letters_D-Litt.jpg')}}"></div>
 
                 <div class="content">
                     <h3>Honored with Degree of Doctor of Letters</h3>
@@ -147,7 +146,7 @@
 
             <div class="container left">
                 <div class="date">10th Dec<br>2018</div>
-                <div class="award-img"><img src="assets/img/awards/Bheeshma-Puraskar.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Bheeshma-Puraskar.jpg')}}"></div>
                 <div class="content">
                     <h3>Bheeshma Puraskar</h3>
                     <p>
@@ -158,7 +157,7 @@
 
             <div class="container right">
                 <div class="date">June 2018</div>
-                <div class="award-img"><img src="assets/img/awards/Ganga-Award.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Ganga-Award.jpg')}}"></div>
 
                 <div class="content">
                     <h3>Ganga Award</h3>
@@ -170,7 +169,7 @@
 
             <div class="container left">
                 <div class="date">18th April<br>2018</div>
-                <div class="award-img"><img src="assets/img/awards/AIMA-Managing-India-Award-2018.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/AIMA-Managing-India-Award-2018.jpg')}}"></div>
                 <div class="content">
                     <h3>Transformational Business Leader of the Year</h3>
                     <p>
@@ -183,7 +182,7 @@
 
             <div class="container right">
                 <div class="date">01 March<br>2018</div>
-                <div class="award-img"><img src="assets/img/awards/Shalin-Manav-Ratna-Award-2018.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Shalin-Manav-Ratna-Award-2018.jpg')}}"></div>
 
                 <div class="content">
                     <h3>Shalin Manav Ratna Award</h3>
@@ -195,7 +194,7 @@
 
             <div class="container left">
                 <div class="date">12 Jan<br>2018</div>
-                <div class="award-img"><img src="assets/img/awards/Degree-of-Doctor-of-letter-Yoga-Honoris-Causa.jpg">
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Degree-of-Doctor-of-letter-Yoga-Honoris-Causa.jpg')}}">
                 </div>
                 <div class="content">
                     <h3>Honored with Degree of Doctor of letter</h3>
@@ -209,7 +208,7 @@
 
             <div class="container right">
                 <div class="date">Jan 2018</div>
-                <div class="award-img"><img src="assets/img/awards/Geeta-Ratna-Samman.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Geeta-Ratna-Samman.jpg')}}"></div>
 
                 <div class="content">
                     <h3>Geeta Ratna Samman</h3>
@@ -221,7 +220,7 @@
 
             <div class="container left">
                 <div class="date">30 Nov<br>2017</div>
-                <div class="award-img"><img src="assets/img/awards/Indian-of-the-Year-Business-Category-2017.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Indian-of-the-Year-Business-Category-2017.jpg')}}"></div>
                 <div class="content">
                     <h3>Indian of the Year Business Category- 2017</h3>
                     <p>
@@ -233,7 +232,7 @@
             <div class="container right">
                 <div class="date">27 Nov<br>2017</div>
                 <div class="award-img"><img
-                        src="assets/img/awards/Jashn-e-Youngistan-Samman-for-Business-Icon-of-the-Year.jpg"></div>
+                        src="{{URL::asset('frontend/assets/img/awards/Jashn-e-Youngistan-Samman-for-Business-Icon-of-the-Year.jpg')}}"></div>
 
                 <div class="content">
                     <h3>Jashn-e-Youngistan Samman for Business Icon of the Year</h3>
@@ -246,7 +245,7 @@
 
             <div class="container left">
                 <div class="date">1 August<br>2017</div>
-                <div class="award-img"><img src="assets/img/awards/Lokmanya-Tilak-Award-2017.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Lokmanya-Tilak-Award-2017.jpg')}}"></div>
                 <div class="content">
                     <h3>Lokmanya Tilak Award</h3>
                     <p>
@@ -257,7 +256,7 @@
 
             <div class="container right">
                 <div class="date">22 March<br>2016</div>
-                <div class="award-img"><img src="assets/img/awards/Special-Recognition-Award.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Special-Recognition-Award.jpg')}}"></div>
 
                 <div class="content">
                     <h3>Special Recognition Award</h3>
@@ -269,7 +268,7 @@
 
             <div class="container left">
                 <div class="date">8th Jan<br>2016</div>
-                <div class="award-img"><img src="assets/img/awards/Bharat-Gaurav-Award.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Bharat-Gaurav-Award.jpg')}}"></div>
                 <div class="content">
                     <h3>Bharat Gaurav Award</h3>
                     <p>
@@ -282,7 +281,7 @@
 
             <div class="container right">
                 <div class="date">07th–09th<br>Nov 2014</div>
-                <div class="award-img"><img src="assets/img/awards/6th-World-Ayurveda-Congress.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/6th-World-Ayurveda-Congress.jpg')}}"></div>
 
                 <div class="content">
                     <h3>Appreciation for Participating in the 6th World Ayurveda Congress</h3>
@@ -296,7 +295,7 @@
 
             <div class="container left">
                 <div class="date">23 Feb<br>2014</div>
-                <div class="award-img"><img src="assets/img/awards/Felicitation-by-Prime-Minister-of-India.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Felicitation-by-Prime-Minister-of-India.jpg')}}"></div>
                 <div class="content">
                     <h3>Ayurveda Expert</h3>
                     <p>
@@ -308,7 +307,7 @@
 
             <div class="container right">
                 <div class="date">2013</div>
-                <div class="award-img"><img src="assets/img/awards/Manav-Ratna-Award.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Manav-Ratna-Award.jpg')}}"></div>
 
                 <div class="content">
                     <h3>Manav Ratna</h3>
@@ -322,7 +321,7 @@
 
             <div class="container left">
                 <div class="date">2012</div>
-                <div class="award-img"><img src="assets/img/awards/Sugyanshri-Award.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Sugyanshri-Award.jpg')}}"></div>
                 <div class="content">
                     <h3>Honored with Sugyanshri</h3>
                     <p>
@@ -360,7 +359,7 @@
 
             <div class="container right">
                 <div class="date">December<br>2010</div>
-                <div class="award-img"><img src="assets/img/awards/Vanaushadhipandit.jpg"></div>
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Vanaushadhipandit.jpg')}}"></div>
                 <div class="content">
                     <h3>Vanaushadhipandit</h3>
                     <p>
@@ -395,7 +394,7 @@
 
             <div class="container left">
                 <div class="date">June<br/>2008</div>
-                <div class="award-img"><img src="assets/img/awards/Felicitation-by-Nepal-Sanskrit-Vishvavidhyalaya.jpg">
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Felicitation-by-Nepal-Sanskrit-Vishvavidhyalaya.jpg')}}">
                 </div>
                 <div class="content">
                     <h3>Felicitation by Nepal Sanskrit Vishvavidhyalaya</h3>
@@ -407,7 +406,7 @@
 
             <div class="container right">
                 <div class="date">23 Oct<br>2004</div>
-                <div class="award-img"><img src="assets/img/awards/Felicitation-by-the-Former-President-of-India.jpg">
+                <div class="award-img"><img src="{{URL::asset('frontend/assets/img/awards/Felicitation-by-the-Former-President-of-India.jpg')}}">
                 </div>
                 <div class="content">
                     <h3>Felicitation by the Former President of India</h3>
@@ -444,5 +443,5 @@
         </div>
     </section>
 
-    <?php include_once ("footer.php"); ?>
-</body>
+    </body>
+@endsection
