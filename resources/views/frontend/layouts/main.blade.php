@@ -125,32 +125,6 @@
                     <li><a href="#">Yoga</a></li>
                 </ul>
             </li>
-        
-
-            <!-- <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span></a>
-                <ul>
-                    <li>
-                        <a href="#">Column 1 link 1</a>
-                        <a href="#">Column 1 link 2</a>
-                        <a href="#">Column 1 link 3</a>
-                    </li>
-                    <li>
-                        <a href="#">Column 2 link 1</a>
-                        <a href="#">Column 2 link 2</a>
-                        <a href="#">Column 3 link 3</a>
-                    </li>
-                    <li>
-                        <a href="#">Column 3 link 1</a>
-                        <a href="#">Column 3 link 2</a>
-                        <a href="#">Column 3 link 3</a>
-                    </li>
-                    <li>
-                        <a href="#">Column 4 link 1</a>
-                        <a href="#">Column 4 link 2</a>
-                        <a href="#">Column 4 link 3</a>
-                    </li>
-                </ul> 
-            </li> -->
 
             <li><a class="nav-link scrollto" href="contact.php">Contact Us</a></li>
         </ul>
