@@ -81,10 +81,55 @@
                         
                     @endforeach
                 </ul>
+
             @endif
         </li>
     @endforeach
 </ul>
+
+            </li>
+            <li class="dropdown"><a href="#"><span>Profiles</span></a>
+                <ul>
+                    <li><a href="corporate.php">Corporate</a></li>
+                    <li><a href="education.php">Education & Research</a></li>
+                    <li><a href="media-publication.php">Media & Publication</a></li>
+                    <li><a href="social.php">Social</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Vision</span></a>
+                <ul>
+                    <li><a href="ayurved.php">Ayurved</a></li>
+                    <li><a href="yoga.php">Yoga</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>CSR</span></a>
+                <ul>
+                    <li><a href="local.php">Local</a></li>
+                    <li><a href="#">National</a></li>
+                    <li><a href="global.php">Global</a></li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="#"><span>Gallery</span></a>
+                <ul>
+                    <li><a href="image-gallery.php">Image Gallery</a></li>
+                    <li><a href="#">Video Gallery</a></li>
+                </ul>
+            </li>
+            <li><a href="research-papers.php">Research</a></li>
+            <li class="dropdown"><a href="#"><span>Publication</span></a>
+                <ul>
+                    <li><a href="books.php">Ayurveds Books</a></li>
+                    <li><a href="#">Ancient Indian Treatises / Manuscripts</a></li>
+                    <li><a href="#">Cookery</a></li>
+                    <li><a href="#">School Books</a></li>
+                    <li><a href="#">Spiritual/Self help/General</a></li>
+                    <li><a href="#">Yoga</a></li>
+                </ul>
+            </li>
+
+            <li><a class="nav-link scrollto" href="contact.php">Contact Us</a></li>
+        </ul>
+
         <i class="bi bi-list mobile-nav-toggle"></i>
     </div>
 </nav><!-- .navbar -->
