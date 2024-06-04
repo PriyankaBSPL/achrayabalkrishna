@@ -259,5 +259,16 @@ if (!function_exists('get_menu_name')) {
 	}
 }
 
+if (!function_exists('getMenuData')) {
+    function getMenuData($id)
+    {
+        return Menu::with('subMenu')
+                    ->where('status', 3)
+                    ->where('menu_position', 1)
+                     ->where('parent_id', $id)
+					->orderBy('order')
+                    ->get();
+    } 
+}
 
 

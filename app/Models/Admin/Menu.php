@@ -19,4 +19,8 @@ class Menu extends Model
         'menu_position',
         'type'
     ];
+    public function subMenu() {
+        return $this->hasMany(Menu::class, 'parent_id');
+    }
+    
 }

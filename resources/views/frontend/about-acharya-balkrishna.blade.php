@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
 
 <body>
     <section class="internal-banner">
-    <h1>Dr. Acharya Balkrishna Ji</h1>
+    <h1>{{$title}}</h1>
     </section>
 <section>
          <div class="container">
@@ -37,7 +36,7 @@
                         India.</p>
                 </div>
  <div class="col-md-6">
-                    <img src="assets/img/acharji-img.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/acharji-img.webp')}}" class="img-fluid" alt="">
                 </div>
                   <P>To strengthen the traditional medicine system of the world he published multivolume of ‘World
                         Herbal Encyclopedia’ that contains description of 60,000 medicinal plant species with world
@@ -98,7 +97,5 @@
                 </div>
                 </div>
 </section>
-  
-   
-    <?php include_once ("footer.php"); ?>
-</body>
+  </body>
+@endsection
