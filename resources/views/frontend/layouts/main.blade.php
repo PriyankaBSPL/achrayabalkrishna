@@ -63,7 +63,7 @@
 <nav id="navbar" class="navbar sticky-top nav-scrolled">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
         <a href="index.php" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="" class="logo">
+            <img src="{{URL::asset('frontend/assets/img/logo.png')}}" alt="" class="logo">
             <span>Acharya Balkrishna</span>
         </a>
         <ul>
@@ -77,8 +77,7 @@
                         <a href="{{ url('publication/'.$child->slug.'/'.$child->id) }}">{{ $child->title }}</a>
                         @else
                         <a href="{{ url('pages/'.$child->slug) }}">{{ $child->title }}</a>
-                        @endif
-                        
+                        @endif  
                     @endforeach
                 </ul>
 
@@ -88,7 +87,7 @@
 </ul>
 
             </li>
-            <li class="dropdown"><a href="#"><span>Profiles</span></a>
+            <!-- <li class="dropdown"><a href="#"><span>Profiles</span></a>
                 <ul>
                     <li><a href="corporate.php">Corporate</a></li>
                     <li><a href="education.php">Education & Research</a></li>
@@ -127,7 +126,7 @@
                 </ul>
             </li>
 
-            <li><a class="nav-link scrollto" href="contact.php">Contact Us</a></li>
+            <li><a class="nav-link scrollto" href="contact.php">Contact Us</a></li> -->
         </ul>
 
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -144,7 +143,7 @@
             <div class="row gy-4">
                 <div class="col-lg-3 col-md-12 footer-info">
                     <a href="index.php" class="logo d-flex align-items-center">
-                        <img src="assets/img/logo.png" alt="" class="logo">
+                        <img src="{{URL::asset('frontend/assets/img/logo.png')}}" alt="" class="logo">
                         <span>Acharya Balkrishna</span>
                     </a>
                     <p>Acharya Balkrishna, a known scholar of Ayurveda, Sanskrit and Vedas, has an ambitious dream of building a progressive nation. </p>

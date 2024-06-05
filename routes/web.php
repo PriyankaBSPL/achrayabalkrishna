@@ -18,15 +18,19 @@ use App\Http\Controllers\Admin\PublicationController;
 // });
 
 Auth::routes();
+
 Route::any('pages/{slug}', [IndexController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
-//Route::get('/', [IndexController::class, 'index']);
-Route::resource('/admin/menu', MenuController::class);
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/publication/{slug}/{id}', [HomeController::class, 'publication']);
+// Route::get('/{id}', [HomeController::class, 'show'])->name('publication.show');
+Route::get('/book/{id}',  [HomeController::class, 'show'])->name('book.show');
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 Route::group(['prefix' => 'admin'], function () {
-
-Route::resource('/language', LanguageController::class);
-Route::resource('/publication', PublicationController::class);
+    Route::resource('/menu', MenuController::class);
+    Route::resource('/language', LanguageController::class);
+    Route::resource('/publication', PublicationController::class);
 });
+

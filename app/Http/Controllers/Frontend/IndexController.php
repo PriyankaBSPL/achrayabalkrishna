@@ -21,7 +21,6 @@ class IndexController extends Controller
                 return response()->view("frontend/$data->slug",compact('title')); 
             }
         }
-   
 
     }
 }
