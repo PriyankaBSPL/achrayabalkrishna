@@ -20,7 +20,7 @@ class PublicationController extends Controller
         $title = "Publication List";
         $publication = Publication::orderBy('created_at', 'desc')->get();
         $SelectType = Menu::where('type', 'Publication')->where('status', 3)->where('parent_id', '>', 0)->pluck('title', 'id');
-        $SelectLanguage = Language::pluck('language', 'id');
+        $SelectLanguage = Language::orderBy('language', 'asc')->pluck('language', 'id');
         return view('admin.publication.publication', ['publications' => $publication, 'SelectTypes' => $SelectType, 'SelectLanguages' => $SelectLanguage], compact('title'));
     }
 
@@ -32,7 +32,7 @@ class PublicationController extends Controller
         //
         $title = "Add Publication";
         $SelectType = Menu::where('type', 'Publication')->where('status', 3)->where('parent_id', '>', 0)->pluck('title', 'id');
-        $SelectLanguage = Language::pluck('language', 'id');
+        $SelectLanguage = Language::orderBy('language', 'asc')->pluck('language', 'id');
         return view('admin.publication.create', ['SelectTypes' => $SelectType, 'SelectLanguages' => $SelectLanguage], compact('title'));
     }
 
@@ -116,7 +116,7 @@ class PublicationController extends Controller
         $title = "Edit Publication";
         $publication = Publication::find($id);
         $SelectType = Menu::where('type', 'Publication')->where('status', 3)->where('parent_id', '>', 0)->pluck('title', 'id');
-        $SelectLanguage = Language::pluck('language', 'id');
+        $SelectLanguage = Language::orderBy('language', 'asc')->pluck('language', 'id');
         return view('admin.publication.edit', ['publications' => $publication, 'SelectTypes' => $SelectType, 'SelectLanguages' => $SelectLanguage], compact('title'));
     }
 

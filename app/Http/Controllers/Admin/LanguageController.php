@@ -16,7 +16,7 @@ class LanguageController extends Controller
     {
         //
         $title = "Language";
-        $youtube = Language::orderBy('created_at', 'desc')->get();
+        $youtube = Language::orderBy('id', 'desc')->get();
         return view('admin.language.language', ['languages' => $youtube], compact('title'));
     }
 

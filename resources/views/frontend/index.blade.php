@@ -20,7 +20,7 @@
     <section class="about">
 
       <div class="container">
-        <img class="bg-about" src="assets/img/bg-image/bg-2.png">
+        <img class="bg-about" src="{{URL::asset('frontend/assets/img/bg-image/bg-2.png')}}">
         <div class="row">
           <div class="col-lg-6 d-flex align-items-center abt-img">
             <img src="{{URL::asset('frontend/assets/img/about.png')}}" class="img-fluid" alt="">

@@ -36,7 +36,7 @@ class HomeController extends Controller
 
         $publications = $query->orderBy('id', 'DESC')->get();
        
-        $SelectLanguages = Language::pluck('language', 'id');
+        $SelectLanguages = Language::orderBy('language', 'asc')->pluck('language', 'id');
         return view('frontend.publication', compact('publications', 'SelectLanguages', 'search', 'languageSelector','slug'));
     }
 
@@ -50,7 +50,7 @@ class HomeController extends Controller
     public function show($id, Request $request)
     {
         $publications = Publication::find($id);
-        $SelectLanguages = Language::pluck('language', 'id');
+        $SelectLanguages = Language::orderBy('language', 'asc')->pluck('language', 'id');
         if (!$publications) {
             abort(404);
         }
