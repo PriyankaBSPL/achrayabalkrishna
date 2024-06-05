@@ -217,4 +217,4 @@
 
 
 <!-- Template Main JS File -->
-<script src="{{URL::asset('frontend/assets/assets/js/main.js')}}"></script>
+<script src="{{URL::asset('frontend/assets/js/main.js')}}"></script>
