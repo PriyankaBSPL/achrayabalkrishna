@@ -5,7 +5,7 @@
     <section class="internal-banner">
     <h1>{{$title}}</h1>
     </section>
-<section>
+    <section>
          <div class="container">
         <div class="row corporate-slide align-items-center">
              
@@ -108,7 +108,6 @@
                 
                 </div>
 </section>
-  
     </section>
     </body>
     @endsection
