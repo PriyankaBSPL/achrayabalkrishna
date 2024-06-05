@@ -5,7 +5,6 @@
     <img src="{{URL::asset('frontend/assets/img/banner-A.webp')}}" class="d-block w-100" alt="...">
   </section>
  
-
   <main id="main">
     <!-- ======= About Section ======= -->
     <section class="greate-slide">
@@ -21,7 +20,7 @@
     <section class="about">
 
       <div class="container">
-        <img class="bg-about" src="{{URL::asset('frontend/assets/img/bg-image/bg-2.png')}}">
+        <img class="bg-about" src="assets/img/bg-image/bg-2.png">
         <div class="row">
           <div class="col-lg-6 d-flex align-items-center abt-img">
             <img src="{{URL::asset('frontend/assets/img/about.png')}}" class="img-fluid" alt="">
@@ -53,63 +52,62 @@
 
     <section class="our-products">
       <div class="container">
-        <header class="section-header">
+       
 
           <h2>Check Ayurvedic Herbs</h2>
-        </header>
+        
 
         <h6>Ayurvedic herbs and spices have some supporting evidence that suggests they may help with certain aspects of
           a person’s health.</h6>
 
-        <div class="swiper mySwiper mt-4">
+        <div class="swiper mySwiper mt-2">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/melissa.png')}}">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/ashwagandha.png')}}">
               <h3>Ashwagandha</h3>
             </div>
 
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/cypress.png')}}">
+          <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/Cumin.png')}}">
               <h3>Cumin</h3>
 
             </div>
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/patchouli.png')}}">
+         <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/Manjistha.png')}}">
               <h3>Manjistha</h3>
             </div>
 
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
+          <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/Boswellia.png')}}">
               <h3>Boswellia</h3>
             </div>
-
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/melissa.png')}}">
+<div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/ashwagandha.png')}}">
               <h3>Licorice root</h3>
             </div>
 
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/cypress.png')}}">
+          <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/Brahmi.png')}}">
               <h3>Brahmi</h3>
 
             </div>
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/patchouli.png')}}">
+      <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/Ajwain.png')}}">
               <h3>Ajwain</h3>
             </div>
 
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
+            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/Turmeric.png')}}">
               <h3>Turmeric</h3>
             </div>
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
+         <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/neem.png')}}">
               <h3>Neem</h3>
             </div>
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
+    <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/cardamom.png')}}">
               <h3>Cardamom</h3>
             </div>
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
+       <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/bitter-melon.png')}}">
               <h3>Bitter melon</h3>
             </div>
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
+           <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/Gotu-kola.png')}}">
               <h3>Gotu kola</h3>
             </div>
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
+     <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/ashwagandha.png')}}">
               <h3>Triphala</h3>
             </div>
-            <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/black-pepper.png')}}">
+           <div class="swiper-slide"><img src="{{URL::asset('frontend/assets/img/herbs/ashwagandha.png')}}">
               <h3>Precautions </h3>
             </div>
           </div>
@@ -273,7 +271,7 @@
       <div class="container">
         <h2>News & Update</h2>
         <h6>Join the Conversation, Stay Updated</h6>
-        <div class="recognize mt-5">
+        <div class="recognize mt-0">
           <div class="wrapper">
             <ul class="owl-carousel">
               <li>
@@ -580,5 +578,6 @@
     </section>
 
   </main><!-- End #main -->
+
 </body>
   @endsection

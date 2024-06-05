@@ -5,7 +5,7 @@
     <section class="internal-banner">
     <h1>{{$title}}</h1>
     </section>
-<section>
+    <section>
          <div class="container">
             <div class="row achraji-slide">
                    <p>Acharya Balkrishna is a dynamic personality and is the Founder Secretary of Patanjali Yogpeeth

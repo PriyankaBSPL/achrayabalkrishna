@@ -6,7 +6,7 @@
     <section class="internal-banner">
     <h1>{{$title}}</h1>
     </section>
-<section class="yogpeeth-slide">
+    <section class="yogpeeth-slide">
          <div class="container">
         <div class="row align-items-center">
              
@@ -294,5 +294,6 @@
                   </div>
              </div>
              </section>
+                
              </body>
     @endsection

@@ -9,10 +9,10 @@
         <div class="container mx-auto">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-4 col-md-6">
-                    <div class="gallery"><a href="{{url('/celebration')}}">
+                    <div class="gallery"><a href="celebration.php">
                             <img src="{{URL::asset('frontend/assets/img/gallery/dikshant-samaroh.jpg')}}" class="img-fluid" alt="">
                         </a>
-                        <h5><a style="color:white" href="{{url('/celebration')}}">
+                        <h5><a style="color:white" href="celebration.php">
                                 Celebrations
                             </a>
                         </h5>
@@ -90,5 +90,6 @@
             </div>
         </div>
     </section>
+
     </body>
   @endsection
