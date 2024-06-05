@@ -32,4 +32,7 @@ class HomeController extends Controller
         $previousUrl = $request->server('HTTP_REFERER');
         return view('frontend.book-detail', compact('publications','SelectLanguages','previousUrl'));
     }
+    public function celebration(){
+        return view('frontend.celebration');
+  }
 }

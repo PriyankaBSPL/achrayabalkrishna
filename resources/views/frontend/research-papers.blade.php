@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
-
+@extends('frontend.layouts.main')
+@section('content')
 <body>
  
   <section class="internal-banner">
-    <h1>Research Papers</h1>
+    <h1>{{$title}}</h1>
     </section>
     <section id="faq" class="faq">
         <div class="container aos-init aos-animate" data-aos="fade-up">
@@ -4928,5 +4926,5 @@ https://www.sciencedirect.com/science/article/abs/pii/S1360859224001141</a></li>
         </div>
 
     </section>
-    <?php include_once ("footer.php"); ?>
-</body>
+    </body>
+  @endsection

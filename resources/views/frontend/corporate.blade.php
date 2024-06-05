@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
+
 
 <body>
     <section class="internal-banner">
-        <h1>Corporate</h1>
+    <h1>{{$title}}</h1>
     </section>
     <section>
         <div class="container">
@@ -26,7 +26,7 @@
                         with new research, keeping the natural taste intact and providing maximum benefits.</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/Ptanjali-20220111-A.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/Ptanjali-20220111-A.webp')}}" class="img-fluid" alt="">
                 </div>
 
             </div>
@@ -38,7 +38,7 @@
 
             <div class="row corporate-slide align-items-center">
                 <div class="col-md-6">
-                    <img src="assets/img/food-herbal.jpg" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/food-herbal.jpg')}}" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-6">
                     <h3>Patanjali Food & Herbal Park</h3>
@@ -76,7 +76,7 @@
                         trials to evolve new drugs and therapies.</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/Ptanjali-divya-pharfamcy.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/Ptanjali-divya-pharfamcy.webp')}}" class="img-fluid" alt="">
                 </div>
                 <p>Divya Yog Mandir (Trust), started as “Brahamkalp Chikitsalaya” at Kripalu Bagh Ashram, Kankhal in
                     1995 in a tiny space where patients suffering from various diseases were treated and cured applying
@@ -92,7 +92,7 @@
 
             <div class="row corporate-slide align-items-center">
                 <div class="col-md-6">
-                    <img src="assets/img/ruchi-soya-img.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/ruchi-soya-img.webp')}}" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-6">
                     <h3>Patanjali Foods Limited</h3>
@@ -129,7 +129,7 @@
                         reducing chemical pesticide excesses in foods and curtailing the pest resistance. </p>
                 </div>
                 <div class="col-md-6">
-                    <img src="assets/img/Ptanjali-pbri.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/Ptanjali-pbri.webp')}}" class="img-fluid" alt="">
                 </div>
                 <p>The products are recognised for high quality effectiveness. The institute is hell-bent in developing
                     techniques for organic farming using biotechnological applications under the esteem guidance of
@@ -143,5 +143,5 @@
     </section>
 
     </section>
-    <?php include_once ("footer.php"); ?>
-</body>
+    </body>
+@endsection

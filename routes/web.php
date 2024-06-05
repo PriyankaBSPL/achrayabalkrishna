@@ -13,18 +13,18 @@ use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\PublicationController;
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Auth::routes();
 
 Route::any('pages/{slug}', [IndexController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/celebration', [HomeController::class, 'celebration']);
+//Route::get('/', [IndexController::class, 'index']);
+Route::resource('/admin/menu', MenuController::class);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/publication/{slug}/{id}', [HomeController::class, 'publication']);
 // Route::get('/{id}', [HomeController::class, 'show'])->name('publication.show');
 Route::get('/book/{id}',  [HomeController::class, 'show'])->name('book.show');
-
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 

@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
 
 <body>
     <section class="internal-banner">
-    <h1>Educations</h1>
+    <h1>{{$title}}</h1>
     </section>
 <section>
          <div class="container">
@@ -16,7 +15,7 @@
                               <p>University of Patanjali (UOP) is a manifestation of the holy vision of Yogrishi Swami Ramdev ji and Shradey Acharya Balkrishna ji to establish a nucleus centre & integral education blending all spectrums of oriental wisdom and scientific knowledge. The university aims at providing teaching-learning and with an impetus to produce professionally competent, personally elevated and socially empathetic alumni. Asceticism, health care, integral education and entrepreneurship are four major components of teaching-learning and interdisciplinary research.</p>
              </div>
  <div class="col-md-6">
-                    <img src="assets/img/about-patanjali.jpg" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/about-patanjali.jpg')}}" class="img-fluid" alt="">
                 </div>
                    <p>The present day education system is nothing but a stereotyped theater. No emphalsis is layed over the personality development. After completion of modern day’s defaulty education, children are left at cross roads and as such they are not able exhibit their mental ability and bodily strength. Imparting so called education has become a business and no one is bothered how to improve upon in order to steamline the defective education system so that the coming generations could be able to become self reliant and dependant. </p>
             <p>Yog Rishi Swami Ramdev ji and Ayurveda Shiromani Acharya Balkrishna have laid impetus and given a clarion call of ‘Back to Nature’ and advocated for new ways and means for creating natural environment, nourishment to health and happiness through Yoga and Ayurveda. With the growing mass following, majority of people are relying to go back and adopt the Ancient roots of Wisdom. Asceticism, health care, integral education and entrepreneurship and become the world leaders.</p>
@@ -30,7 +29,7 @@
                 
                <div class="row corporate-slide align-items-center">
              <div class="col-md-6">
-                    <img src="assets/img/Patanjali-reserch.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/Patanjali-reserch.webp')}}" class="img-fluid" alt="">
                 </div>
                           <div class="col-md-6">
                               <h3>Patanjali Ayurved College & Hospital</h3>
@@ -57,7 +56,7 @@
                     <p><a href="https://patanjali.res.in/" target="_blank">Read More</a></p>    
                </div>
  <div class="col-md-6">
-                    <img src="assets/img/our-mission-img.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/our-mission-img.webp')}}" class="img-fluid" alt="">
                 </div>
                 </div>
                 </div>
@@ -69,7 +68,7 @@
                 
                    <div class="row corporate-slide align-items-center">
              <div class="col-md-6">
-                    <img src="assets/img/acharyakulam-img.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/acharyakulam-img.webp')}}" class="img-fluid" alt="">
                 </div>
                           <div class="col-md-6">
                               <h3>Acharyakulam</h3>
@@ -103,7 +102,7 @@
                     <p><a href="https://bsb.org.in/" target="_blank">Read More</a></p>  
                </div>
   <div class="col-md-6">
-                    <img src="assets/img/bsb.webp" class="img-fluid" alt="">
+                    <img src="{{URL::asset('frontend/assets/img/bsb.webp')}}" class="img-fluid" alt="">
                 </div>
              </div>
                 
@@ -111,5 +110,5 @@
 </section>
   
     </section>
-    <?php include_once ("footer.php"); ?>
-</body>
+    </body>
+    @endsection

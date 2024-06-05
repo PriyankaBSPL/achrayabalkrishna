@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php include_once ("header.php"); ?>
+@extends('frontend.layouts.main')
+@section('content')
 
 <body>
 
     <section class="banner">
-        <img src="assets/img/conatct-us-banner.jpg" alt="banner" class="img-fluid">
+        <?php
+        if(!empty($banner_image))
+        {
+        ?>
+        <img src="{{ URL::asset('/admin/uploads/banner_image/'.$banner_image)}}" alt="banner" class="img-fluid">
+        <?php }?>
     </section>
 
     <!-- ======= Contact Section ======= -->
@@ -97,5 +101,5 @@
     </section>
 
 
-    <?php include_once ("footer.php"); ?>
-</body>
+    </body>
+  @endsection
