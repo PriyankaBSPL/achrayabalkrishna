@@ -52,8 +52,8 @@ class HomeController extends Controller
         if (!$publications) {
             abort(404);
         }
-        $previousUrl = $request->server('HTTP_REFERER');
-        return view('frontend.book-detail', compact('publications', 'SelectLanguages', 'previousUrl'));
+        //$previousUrl = $request->server('HTTP_REFERER');
+        return view('frontend.book-detail', compact('publications', 'SelectLanguages'));
     }
     public function celebration()
     {
