@@ -296,7 +296,7 @@
 })();
 
 var swiper = new Swiper(".our-products .mySwiper", {
-  slidesPerView: 4,
+  slidesPerView: 6,
   spaceBetween: 30,
 
   autoplay: {
@@ -325,7 +325,7 @@ var swiper = new Swiper(".our-products .mySwiper", {
       },
     },
     1000: {
-      slidesPerView: 4,
+      slidesPerView: 6,
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

@@ -6,13 +6,14 @@
     <h1>{{$title}}</h1>
     </section>
 
+   
     <section class="ayurveda">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6">
 
                     <ul>
-                        <h3>Uttarakhand Disaster, 2013</h3>
+                        <h3>Uttarakhand Disaster 2013</h3>
                         <li>
                             Patanjali Yogpeeth (Trust) of H.H. Swami Ramdevji Maharaj is engaged in the relief work for
                             Uttarakhand disaster affected persons at large scale. Trust’s Secretary General rev. Acharya
@@ -63,23 +64,32 @@
 
     <section class="ayurveda">
         <div class="container">
-
-            <header class="section-header">
-                <h2>Ashram for Orphans (Children)</h2>
-            </header>
-
-            <div class="row align-items-center">
+            <div class="row">
                 <div class="col-md-6">
-                    <img src="{{URL::asset('frontend/assets/img/local/ashram.webp')}}" class="" alt="" width="100%">
+                    <img src="{{URL::asset('frontend/assets/img/global/bihar.webp')}}" class="" alt="" width="100%">
                 </div>
 
                 <div class="col-md-6">
+                    <h3>Bihar Flood 2008</h3>
                     <p>
-                        Hundred orphan children have been adopted by Patanjali after Uttarakhand disaster 2014.
-                        Their basic needs like Accommodation, Health and Education are provided at Patanjali
-                        Sevashram, Mulya, Devprayag.
+                        Patanjali Yogpeeth emerged as the biggest NGO in the world to provide aid and relief to the
+                        victims of the most calamitous floods of the century in Bihar in 2008.
+                    </p>
+                    <p>Over four million people of about sixteen hundred villages of sixteen districts of Bihar were
+                        badly affected due to the horrible flood situation. More than two million people in isolated
+                        villages in the second-most populous state of the country had been displaced and about a quarter
+                        of a million houses destroyed in the worst flood to have hit the nation in the last 50 years.
                     </p>
 
+                    <p>Flood relief and assistance work was undertaken at more than 50 places in the flood ravaged
+                        districts where free food and clothing were distributed to lakhs of people daily.</p>
+
+                </div>
+                <div class="col-md-12 mt-4">
+                    <P>More than 15,000 Volunteers of Patanjali Yogpeeth under the guidance of H.H. Swami Ramdevji
+                        Maharaj and Revered Acharya Balkrishna were engaged in the relief work. H.H. Swamiji Maharaj &
+                        Revered Acharyaji Maharaj went to the flood affected areas to help the affected people in
+                        dealing with the catastrophe.</P>
                 </div>
             </div>
         </div>
@@ -87,81 +97,51 @@
 
     <section class="ayurveda" style="background: #fbf6ea;">
         <div class="container">
-
-            <header class="section-header">
-                <h2>Other Services</h2>
-            </header>
-
+            <h3>Kedarnath Disaster 2013</h3>
             <div class="row">
-                <div class="col-md-6">
-                    <p><strong>Free Residential Facilities at Mahrishi Balmiki Dharamshala</strong> <br />Haridwar
-                        is the religious
-                        capital of the country, where lacks of pilgrims come from all across the globe daily. Some
-                        of them belong to poor section of the society who can’t even arrange food and lodging on
-                        their own. Keeping this fact in mind, a four story huge hospice of 86,000 sq. ft. covered
-                        area has been built in Patanjali Yogpeeth-2 by Patanjali Yogpeeth (Trust). Here lodging
-                        facilities for about 1000 persons are available. On ground floor 53, on first floor 90, on
-                        second floor 87 and on third floor 84 spacious rooms with modern facilities have been built.
-                        This hospice has been named after Mahrishi Balmiki, the author of the great epic ‘Ramayana.’
+                <div class="col-md-12">
+                    <p>Patanjali Yogpeeth (Trust) of H.H. Swami Ramdevji Maharaj was engaged in the relief work for the
+                        effected persons of the Uttarakhand disaster at large scale. Trust’s Secretary General rev.
+                        Acharya Balkrishna himself with his team of volunteers had spearheaded the relief work from
+                        Guptkanshi near Kedarnath valley. Big camps to distribute cooked food, medicines and water had
+                        been established in badly affected areas of Uttarakhand like Guptkashi, Rudraprayag and
+                        Joshimath etc.
                     </p>
 
-                    <p>Yajna is performed daily within the premises to enable persons staying in this hospice to
-                        come closer to Indian values and traditions. Visitors can also seek free Ayurvedic
-                        consultancy in O.P.D. of Patanjali Yogpeeth. They can also gain the practical knowledge of
-                        Yoga and Pranayama by participating in Yoga Classes which are conducted at one-hour
-                        intervals.</p>
+                    <p>The trust with the help of its volunteers had distributed tons of food material like biscuits,
+                        wheat-flour, salt, spices, mustard oil, water etc. to the people living in distant localities,
+                        cut off from the road networks.</p>
 
-                </div>
+                    <P><strong>Ashram for Orphans (Children) at Narayankoti, Near Guptkashi (Uttarakhand)</strong></P>
+                    <P>The Trust has initiated the adoption of children, who became orphans & helpless in the natural
+                        calamity of Uttarakhand. The management of the Trust has taken a hotel on rent to shelter these
+                        orphans. 101 orphans (children) have been giving free education in Dr. Jacques Vigne National
+                        School and job oriented training of medicinal herbs, carpentry & other traditional work, in
+                        addition to lodging & boarding.</P>
 
-                <div class="col-md-6">
-                    <img src="{{URL::asset('frontend/assets/img/local/valmiki.webp')}}" class="" alt="" width="100%">
                 </div>
             </div>
 
             <div class="row">
-
-                <div class="col-md-6">
-                    <img src="{{URL::asset('frontend/assets/img/local/santravidash.jpg')}}" class="" alt="" width="100%">
-                </div>
-
-                <div class="col-md-6">
-                    <p><strong>Free food arrangements at Sant Ravidas Langar</strong> <br />Adjacent to Mahrishi
-                        Balmiki Dharamshala, a two story Langar hall of 23,600 sq. ft. covered area, has been built in
-                        Patanjali Yogpeeth-2, by the Trust, in which nearly about 5000 persons can have free meals
-                        daily. The Langar is in operation from early in the morning to till night, everyday. This Langar
-                        has been named after the great saint Ravidas.
+                <div class="col-md-12">
+                    <H3>Tsunami 2004</H3>
+                    <p>Patanjali Yogpeeth provided out and out assistance to persons affected by the Tsunami disaster of
+                        December 2004, and an aid of 50 Lakh rupees was given to help the victims as a contribution from
+                        the institution.
                     </p>
 
-                    <p><strong>Yajna (Agnihotra) </strong> <br />as a means of purifying the atmosphere, attainment
-                        of worldly pleasures, prosperity, inner
-                        tranquillity & relief from miseries and diseases is performed daily in the Yajnashala situated
-                        in Patanjali Yogpeeth ’s premises as well as other premises owned by Divya Yog Mandir (Trust) &
-                        Patanjali Yogpeeth (Trust).</p>
+                    <p>Flood relief and assistance work was undertaken at more than 50 places in the flood ravaged
+                        districts where free food and clothing were distributed to lakhs of people daily.</p>
 
-                </div>
-            </div>
+                    <p>More than 15,000 Volunteers of Patanjali Yogpeeth under the guidance of H.H. Swami Ramdevji
+                        Maharaj and Revered Acharya Balkrishnaji were engaged in the relief work for Bihar disaster
+                        affected persons. H.H. Swamiji Maharaj & Revered Acharyaji Maharaj went to the flood affected
+                        areas to help the affected people in dealing with the catastrophe.</p>
 
-
-            <div class="row mt-4">
-                <div class="col-md-6">
-                    <p><strong>Transportation facility</strong> <br /> A free
-                        transportation facility is available for patients as well as visitors visiting Patanjali
-                        Yogpeeth, from Kankhal to Patanjali Yogpeeth & vice versa.
-                    </p>
-
-                    <p><strong> Library </strong> <br /> A world class Library is available for free usage for
-                        visitors to Patanjali Yogpeeth.</p>
-
-                    <p><strong>Education & Training </strong> <br />Free Education and training is regularly provided
-                        in Medicinal Plant Agriculture & Panchgavya to peasants.</p>
-
-                </div>
-
-                <div class="col-md-6">
-                    <img src="{{URL::asset('frontend/assets/img/local/yag.webp')}}" class="" alt="" width="100%">
                 </div>
             </div>
         </div>
     </section>
+
     </body>
   @endsection

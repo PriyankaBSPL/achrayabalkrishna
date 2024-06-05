@@ -5,13 +5,13 @@
   <section class="internal-banner">
     <h1>{{$title}}</h1>
     </section>
-    <section id="faq" class="faq">
+    <section id="faq" class="faq reasrch-list">
         <div class="container aos-init aos-animate" data-aos="fade-up">
-            <header class="section-header">
+          
                
-                <p class="abt-cnt">Acharya Balkrishna has several research papers published in his name in several
-                    National and International journals and magazines as an author and co-author.</p>
-            </header>
+                <h6>Acharya Balkrishna has several research papers published in his name in several
+                    National and International journals and magazines as an author and co-author.</h6>
+     
 
             <div class="row mt-5">
                 <div class="col-lg-12">
@@ -24,7 +24,7 @@
                                     2024
                                 </button>
                             </h2>
-                            <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1"
+                            <div id="faq-content-1" class="accordion-collapse collapse show" data-bs-parent="#faqlist1"
                                 style="">
                                 <div class="accordion-body">
                                     <div class="row">
