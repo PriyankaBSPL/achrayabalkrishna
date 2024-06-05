@@ -52,7 +52,8 @@
                     <p><strong>Author :-</strong> {{$publications->author}}</p>
                     <p><strong>Cover Type :-</strong> {{$publications->cover_type}}</p>
 
-                    <a href="{{$previousUrl}}" class="btn-buy"><i class="fa fa-angle-double-left px-1" aria-hidden="true"></i>Back</a>
+                    <a href="/publication/{{ $slug }}/{{ $id }}" class="btn-buy"><i class="fa fa-angle-double-left px-1" aria-hidden="true"></i>Back</a>
+
                 </div>
             </div>
         </div>

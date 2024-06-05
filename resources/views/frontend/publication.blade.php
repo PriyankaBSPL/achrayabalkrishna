@@ -8,6 +8,32 @@
 
     <section class="book-content">
         <div class="container">
+            <form action="">
+                <div class="book-filter row">
+                    <div class="col-md-5">
+                        <div class="dropdown text-center">
+                            <select name="languageSelector" id="languageSelector">
+                                <option value="" > Select The Languages </option>
+                                @foreach ($SelectLanguages as $id => $title)
+                                <option value="{{ $id }}" {{ $languageSelector == $id ? 'selected' : '' }}>{{ $title }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="search-container">
+                            <input type="text" id="search" placeholder="Search.." name="search" value="{{$search}}">
+                            <button type="submit"><i class="fa fa-search"></i></button>            
+                        </div>
+                        <div class="search-results"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- <section class="book-content">
+        <div class="container">
 
             <div class="book-filter row">
                 <div class="col-md-5">
@@ -19,7 +45,6 @@
                             <option value="Spanish">Spanish</option>
                             <option value="French">French</option>
                             <option value="German">German</option>
-                            <!-- Add more language options here -->
                         </select>
                     </div>
                 </div>
@@ -33,11 +58,9 @@
                     </div>
                     <div class="search-results"></div>
                 </div>
-
             </div>
-
         </div>
-    </section>
+    </section> -->
 
     <section id="pricing" class="pricing">
         <div class="container aos-init aos-animate" data-aos="fade-up">
@@ -73,45 +96,6 @@
                 @endif
                 @endforeach
             </div>
-
-            <!-- <div class="row gy-4 aos-init aos-animate mt-2" data-aos="fade-left">
-                <div class="col-lg-3 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="box card-container">
-                        <img src="assets/img/books/secrets-of-indian-herbs.jpg" class="img-fluid" alt="">
-                        <h4> <a href="secrets-of-indian-herbs.php">Jadi Buti Rahasya/ Secrets of Indian Herbs</a></h4>
-                        <p>Language: English</p>
-                        <a href="secrets-of-indian-herbs.php" class="btn-buy">Read More</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="box card-container">
-                        <img src="assets/img/books/upchar-padhiti.jpg" class="img-fluid" alt="">
-                        <h4>Upchar Padhyati</h4>
-                        <p>Language: Hindi</p>
-                        <a href="#" class="btn-buy">Read More</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="box card-container">
-                        <img src="assets/img/books/hansrajnidanam.jpg" class="img-fluid" alt="">
-                        <h4>Hansrajnidanam</h4>
-                        <p>Language: Hindi</p>
-                        <a href="#" class="btn-buy">Read More</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="box card-container">
-                        <img src="assets/img/books/govinddasotsav.jpg" class="img-fluid" alt="">
-                        <h4>Govinddasotsav</h4>
-                        <p>Language: Hindi</p>
-                        <a href="#" class="btn-buy">Read More</a>
-                    </div>
-                </div>
-            </div> -->
-
         </div>
 
     </section>
