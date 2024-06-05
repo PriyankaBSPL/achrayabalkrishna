@@ -62,7 +62,9 @@
 </div>
 <nav id="navbar" class="navbar sticky-top nav-scrolled">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
         <a href="{{url('/')}}" class="logo d-flex align-items-center">
+
             <img src="{{URL::asset('frontend/assets/img/logo.png')}}" alt="" class="logo">
             <span>Acharya Balkrishna</span>
         </a>
@@ -78,6 +80,7 @@
                         @else
                         <a href="{{ ($child->slug=='#')?url('#'):url('pages/'.$child->slug) }}">{{ $child->title }}</a>
                         @endif
+
                     @endforeach
                 </ul>
 
@@ -87,7 +90,7 @@
 </ul>
 
             </li>
-         
+
 
         <i class="bi bi-list mobile-nav-toggle"></i>
     </div>
@@ -103,7 +106,7 @@
             <div class="row gy-4">
                 <div class="col-lg-3 col-md-12 footer-info">
                     <a href="index.php" class="logo d-flex align-items-center">
-                        <img src="assets/img/logo.png" alt="" class="logo">
+                        <img src="{{URL::asset('frontend/assets/img/logo.png')}}" alt="" class="logo">
                         <span>Acharya Balkrishna</span>
                     </a>
                     <p>Acharya Balkrishna, a known scholar of Ayurveda, Sanskrit and Vedas, has an ambitious dream of building a progressive nation. </p>
