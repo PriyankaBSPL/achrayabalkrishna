@@ -54,14 +54,14 @@
                 <div class="form-group">
                   <label for="exampleInputEmail1">Date</label>
                   <span style="color: red;" class="star">*</span>
-                  <input type="date" class="form-control" name="date" >
+                  <input type="date" class="form-control" name="date" value="{{ old('date') }}">
                   <span class="text-danger"> @error('date'){{$message}} @enderror</span>
                 </div>
                 
                                 <div class="form-group">
                   <label for="exampleInputEmail1">Read More Link</label>
         
-                  <input type="text" class="form-control" name="read_more_link" placeholder="Enter Link">
+                  <input type="text" class="form-control" name="read_more_link" placeholder="Enter Link" value="{{ old('read_more_link') }}">
                   <span class="text-danger"> @error('read_more_link'){{$message}} @enderror</span>
                 </div>
                 <div class="form-group">

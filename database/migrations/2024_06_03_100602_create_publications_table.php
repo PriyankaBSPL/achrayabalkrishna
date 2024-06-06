@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('publication_type');
             $table->string('title');
             $table->string('language');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('author');
             $table->string('category');
             $table->string('publisher');

@@ -67,7 +67,7 @@
 
                                 <div class="form-group">
                                     <label for="image">Image</label>
-                                    <span style="color: red;" class="star">*</span>
+                                    <!-- <span style="color: red;" class="star">*</span> -->
                                     <input type="file" name="image" class="form-control @error('image') is-invalid @enderror" id="image">
                                     <span class="text-danger">@error('image'){{ $message }}@enderror</span>
                                 </div>

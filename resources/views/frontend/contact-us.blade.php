@@ -5,11 +5,10 @@
 
     <section class="banner">
         <?php
-        if(!empty($banner_image))
-        {
+        if (!empty($banner_image)) {
         ?>
-        <img src="{{ URL::asset('/admin/uploads/banner_image/'.$banner_image)}}" alt="banner" class="img-fluid">
-        <?php }?>
+            <img src="{{ URL::asset('/admin/uploads/banner_image/'.$banner_image)}}" alt="banner" class="img-fluid">
+        <?php } ?>
     </section>
 
     <!-- ======= Contact Section ======= -->
@@ -44,14 +43,14 @@
                         </div>
                         <div class="col-md-6">
                             <div class="info-box">
-                            <i class="bi bi-device-ssd"></i>
+                                <i class="bi bi-device-ssd"></i>
                                 <h3>Fax No.</h3>
                                 <p>+91-1334-244805</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="info-box">
-                            <i class="bi bi-envelope"></i>
+                                <i class="bi bi-envelope"></i>
                                 <h3>Email</h3>
                                 <p>divyayoga@divyayoga.com</p>
                             </div>
@@ -61,33 +60,48 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <form action="forms/contact.php" method="post" class="php-email-form">
+                    @if ($errorMessage = Session::get('error'))
+                    <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ $errorMessage }}
+                    </div>
+                    @endif
+
+                    @if ($successMessage = Session::get('success'))
+                    <div class="alert alert-success">
+                        {{ $successMessage }}
+                    </div>
+                    @endif
+                    <!-- <form action="{{ route('contactsave') }}" method="post" class="php-email-form" id="frmContact" name="frmContact" role="form"> -->
+                    <form novalidate="" action="{{ route('contactsave') }}" id="frmContact" name="frmContact" method="post" role="form">
+                        @csrf
                         <div class="row gy-4">
 
                             <div class="col-md-6">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" value="{{ old('name') }}">
+                                <span class="text-danger">@error('name'){{$message}} @enderror</span>
                             </div>
 
                             <div class="col-md-6 ">
-                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" value="{{ old('email') }}">
+                                <span class="text-danger">@error('email'){{$message}} @enderror</span>
                             </div>
 
                             <div class="col-md-12">
-                                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                <input type="text" class="form-control" name="sub" id="sub" placeholder="Subject" value="{{ old('sub') }}">
+                                <span class="text-danger">@error('sub'){{$message}} @enderror</span>
                             </div>
 
                             <div class="col-md-12">
-                                <textarea class="form-control" name="message" rows="6" placeholder="Message"
-                                    required></textarea>
+                                <textarea class="form-control" name="msg" id="msg" rows="6" placeholder="Message">{{ old('msg') }}</textarea>
+                                <span class="text-danger">@error('msg'){{$message}} @enderror</span>
                             </div>
 
                             <div class="col-md-12 text-center">
-                                <div class="loading">Loading</div>
+                                <!-- <div class="loading">Loading</div>
                                 <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                <button type="submit">Send Message</button>
-                            </div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div> -->
+                                <button type="submit" name="submit">Send Message</button>
+                            </div> 
 
                         </div>
                     </form>
@@ -101,5 +115,5 @@
     </section>
 
 
-    </body>
-  @endsection
+</body>
+@endsection
