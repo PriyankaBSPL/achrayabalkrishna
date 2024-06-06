@@ -17,7 +17,7 @@
                         <div class="portfolio-info">
                             <div class="portfolio-links">
                                 <h5>
-                                    <a style="color:white" href="assets/img/gallery/dikshant-samaroh.jpg"
+                                    <a style="color:white" href="{{URL::asset('frontend/assets/img/gallery/dikshant-samaroh.jpg')}}"
                                         class="bi bi-plus portfokio-lightbox"></a>
                                 </h5>
                             </div>

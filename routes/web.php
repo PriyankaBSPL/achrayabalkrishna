@@ -19,12 +19,17 @@ Route::get('/celebration', [HomeController::class, 'celebration']);
 Route::get('/news', [HomeController::class, 'news']);
 //Route::get('/', [IndexController::class, 'index']);
 Route::resource('/admin/menu', MenuController::class);
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/publication/{slug}/{id}', [HomeController::class, 'publication'])->name('publication');
 Route::get('/book/{id}',  [HomeController::class, 'show'])->name('book.show');
-
+Route::post('contactsave', [HomeController::class, 'contactsave'])->name('contactsave');
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+    Route::group(['prefix' => 'admin'], function () {
+        Route::resource('/menu', MenuController::class);
+        Route::resource('/language', LanguageController::class);
+        Route::resource('/publication', PublicationController::class);
+    });
 
 Route::group(['prefix' => 'admin'], function () {
     Route::resource('/menu', MenuController::class);
@@ -32,4 +37,3 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('/publication', PublicationController::class);
     Route::resource('/news', NewsController::class);
 });
-

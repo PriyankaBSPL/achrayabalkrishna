@@ -13,7 +13,7 @@
                     <div class="col-md-5">
                         <div class="dropdown text-center">
                             <select name="languageSelector" id="languageSelector">
-                                <option value="" > Select The Languages </option>
+                                <option value=""> Select The Languages </option>
                                 @foreach ($SelectLanguages as $id => $title)
                                 <option value="{{ $id }}" {{ $languageSelector == $id ? 'selected' : '' }}>{{ $title }}</option>
                                 @endforeach
@@ -23,7 +23,7 @@
                     <div class="col-md-7">
                         <div class="search-container">
                             <input type="text" id="search" placeholder="Search.." name="search" value="{{$search}}">
-                            <button type="submit"><i class="fa fa-search"></i></button>            
+                            <button type="submit"><i class="fa fa-search"></i></button>
                         </div>
                         <div class="search-results"></div>
                     </div>
@@ -79,7 +79,13 @@
                     @endif
                     <div class="col-lg-3 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
                         <div class="box card-container">
+                            
+                            @if(!empty($publication->image))
                             <img src="{{URL::asset('/admin/upload/Publication/' .$publication->image)}}" class="img-fluid" alt="">
+                            @else
+                            <img src="{{URL::asset('frontend/assets/img/noimage.jpg')}}" class="img-fluid" alt="">
+                            @endif
+
                             <h4> <a href="{{ route('book.show', $publication->id) }}">{{$publication->title}}</a></h4>
                             <p>Language:
                                 @foreach($SelectLanguages as $id => $language)

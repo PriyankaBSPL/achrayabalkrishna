@@ -7,6 +7,7 @@
 <!-- email id: admin@bharuwasolutions.com
 password: admin@123 -->
 
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -63,11 +64,11 @@ password: admin@123 -->
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                <!-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                @endif -->
                             </div>
                         </div>
                     </form>
@@ -76,4 +77,6 @@ password: admin@123 -->
         </div>
     </div>
 </div>
+
+
 @endsection

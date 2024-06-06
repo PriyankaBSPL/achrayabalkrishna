@@ -4,10 +4,15 @@
 <body>
     <section class="secret-herb">
         <div class="container">
-        
+
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="{{URL::asset('/admin/upload/Publication/' .$publications->image)}}">
+                    <!-- <img src="{{URL::asset('/admin/upload/Publication/' .$publications->image)}}"> -->
+                    @if(!empty($publications->image))
+                    <img src="{{URL::asset('/admin/upload/Publication/' .$publications->image)}}" class="img-fluid" alt="">
+                    @else
+                    <img src="{{URL::asset('frontend/assets/img/noimage.jpg')}}" class="img-fluid" alt="">
+                    @endif
                 </div>
 
                 <div class="col-lg-8">
@@ -32,7 +37,7 @@
                             <i class="fa fa-globe" aria-hidden="true"></i><span> Country : {{$publications->country}}</span>
                         </div>
                         <div class="book-info ">
-                            <i class="fa fa-globe" aria-hidden="true"></i><span> Language : 
+                            <i class="fa fa-globe" aria-hidden="true"></i><span> Language :
                                 @foreach($SelectLanguages as $id => $language)
                                 @if($id == $publications->language)
                                 {{ $language }}
@@ -46,7 +51,7 @@
 
                 <div class="col-lg-12 book-disc">
                     <h5>Description</h5>
-                   
+
                     <p>{!! $publications->description!!}</p>
                     <p><strong>Publisher :-</strong> {{$publications->publisher}}</p>
                     <p><strong>Author :-</strong> {{$publications->author}}</p>
