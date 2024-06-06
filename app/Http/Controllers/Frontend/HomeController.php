@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Admin\Language;
 use App\Models\Admin\Publication;
 use App\Http\Controllers\Controller;
-
+use App\Models\Admin\News;
 class HomeController extends Controller
 {
     public function index()
@@ -58,5 +58,12 @@ class HomeController extends Controller
     public function celebration()
     {
         return view('frontend.celebration');
+  }
+  public function news(){
+    $data=News::orderBy('id','desc')->get();
+    return view('frontend.news',compact('data'));
+}
+
     }
+
 }
