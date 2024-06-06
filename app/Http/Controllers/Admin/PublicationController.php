@@ -45,7 +45,7 @@ class PublicationController extends Controller
         $Validation = [
             'publication_type' => 'required',
             'title' => 'required',
-            'image' => 'required|image|mimes:jpeg,jpg,png,webp|max:2048',
+            'image' => 'image|mimes:jpeg,jpg,png,webp|max:2048',
             'language' => 'required',
             'author' => 'required',
             'category' => 'required',
