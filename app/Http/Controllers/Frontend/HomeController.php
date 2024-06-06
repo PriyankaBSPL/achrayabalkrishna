@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Admin\Language;
 use App\Models\Admin\ContactUs;
 use App\Models\Admin\Publication;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Admin\News;
@@ -15,7 +16,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $data=News::orderBy('id','desc')->get();
+        return view('frontend.index',compact('data'));
     }
 
 
@@ -67,7 +69,7 @@ class HomeController extends Controller
     return view('frontend.news',compact('data'));
 }
 
-    }
+   
 
 
     public function contactsave(Request $request)
@@ -104,6 +106,6 @@ class HomeController extends Controller
 
         return back()->with('success', $msg);
     }
-
-
 }
+
+
