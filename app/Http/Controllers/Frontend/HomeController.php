@@ -11,6 +11,8 @@ use App\Models\Admin\Publication;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 
+use App\Models\Admin\News;
+
 class HomeController extends Controller
 {
     public function index()
@@ -20,12 +22,12 @@ class HomeController extends Controller
 
 
     public function publication($slug, $id, Request $request)
-    { 
+    {
         $languageSelector = $request->input('languageSelector');
         $search = $request->input('search');
 
         $query = Publication::with('menu')->where('publication_type', $id);
-        
+
         if (!empty($search)) {
             $query->where('title', 'LIKE', "%$search%");
         }
@@ -35,9 +37,9 @@ class HomeController extends Controller
         }
 
         $publications = $query->orderBy('id', 'DESC')->get();
-       
+
         $SelectLanguages = Language::orderBy('language', 'asc')->pluck('language', 'id');
-        return view('frontend.publication', compact('publications', 'SelectLanguages', 'search', 'languageSelector','slug'));
+        return view('frontend.publication', compact('publications', 'SelectLanguages', 'search', 'languageSelector', 'slug'));
     }
 
     // public function publication($slug, $id)
@@ -82,7 +84,7 @@ class HomeController extends Controller
         $contact->msg = $validatedData['msg'];
         $contact->save();
 
-        
+
         // Sending an email
         $recipient = "zalapriyanka1997@gmail.com";
         Mail::to($recipient)->send(new ContactMail(
@@ -97,5 +99,10 @@ class HomeController extends Controller
         return back()->with('success', $msg);
     }
 
-    
+
+    public function news()
+    {
+        $data = News::orderBy('id', 'desc')->get();
+        return view('frontend.news', compact('data'));
+    }
 }

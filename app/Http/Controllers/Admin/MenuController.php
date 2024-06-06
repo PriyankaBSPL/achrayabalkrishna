@@ -105,6 +105,7 @@ class MenuController extends Controller
           $menu->status=$request->status;
           $menu->menu_position=$request->menu_position;
           $menu->type=$request->type;
+
           if (isset($request->banner_image)) {
             $newimage = time() . '.' . $request->banner_image->extension();
             $request->banner_image->move(public_path('admin/uploads/banner_image'), $newimage);
@@ -115,12 +116,7 @@ class MenuController extends Controller
             $menu->banner_image =  $newimage;
             //dd($notification->image);
         }
-        //   if (isset($request->banner_image)) {
-        //       $file = $request->file('banner_image');
-        //       $image = time() . '.' . $file->extension();
-        //       $request->banner_image->move(public_path('/admin/uploads/banner_image'), $image);
-        //       $menu->banner_image = $image; 
-        //   }
+       
           $result = $menu->save();
           if ($result) {
               return redirect('/admin/menu')->withSuccess('Menu detail updated Successfully!');
