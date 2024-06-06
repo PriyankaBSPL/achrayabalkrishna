@@ -10,7 +10,7 @@ use App\Models\Admin\ContactUs;
 use App\Models\Admin\Publication;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
-
+use App\Models\Admin\News;
 class HomeController extends Controller
 {
     public function index()
@@ -54,13 +54,21 @@ class HomeController extends Controller
         if (!$publications) {
             abort(404);
         }
+        //$previousUrl = $request->server('HTTP_REFERER');
         return view('frontend.book-detail', compact('publications', 'SelectLanguages'));
     }
 
     public function celebration()
     {
         return view('frontend.celebration');
+  }
+  public function news(){
+    $data=News::orderBy('id','desc')->get();
+    return view('frontend.news',compact('data'));
+}
+
     }
+
 
     public function contactsave(Request $request)
     {
@@ -97,5 +105,5 @@ class HomeController extends Controller
         return back()->with('success', $msg);
     }
 
-    
+
 }

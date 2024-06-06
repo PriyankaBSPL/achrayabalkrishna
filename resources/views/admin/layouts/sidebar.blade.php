@@ -49,6 +49,12 @@
            </a>
          </li>
 
+         <li class="nav-item">
+           <a href="{{url('/admin/news')}}" class="nav-link">
+             <i class="nav-icon fas fa-th"></i>
+             <p>News</p>
+           </a>
+         </li>
        </ul>
      </nav>
      <!-- /.sidebar-menu -->
