@@ -20,7 +20,6 @@ Route::get('/book/{id}',  [HomeController::class, 'show'])->name('book.show');
 Route::post('contactsave', [HomeController::class, 'contactsave'])->name('contactsave');
 
 
-
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
     Route::group(['prefix' => 'admin'], function () {
@@ -29,6 +28,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('/publication', PublicationController::class);
         Route::resource('/news', NewsController::class);
     });
-    });
+});
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+// Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
