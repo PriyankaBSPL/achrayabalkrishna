@@ -20,6 +20,9 @@ Route::get('/book/{id}',  [HomeController::class, 'show'])->name('book.show');
 Route::post('contactsave', [HomeController::class, 'contactsave'])->name('contactsave');
 
 
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
     Route::group(['prefix' => 'admin'], function () {
