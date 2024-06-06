@@ -7,9 +7,7 @@ use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Admin\NewsController;
-use App\Http\Controllers\Admin\MenuController;
-use App\Http\Controllers\Frontend\IndexController;
-use App\Http\Controllers\Frontend\HomeController;
+
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\PublicationController;
 Auth::routes();
