@@ -4,7 +4,8 @@ use Carbon\Carbon;
 use App\Models\Admin\Menu;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-
+use App\Models\Admin\PhotoGallery;
+use App\Models\Admin\PhotoCategory;
 /**
  * Write code on Method
  *
@@ -270,5 +271,79 @@ if (!function_exists('getMenuData')) {
                     ->get();
     } 
 }
+if ( ! function_exists('primary_category'))
+{
+	function primary_category( $cat_id='')
+	{
+		$selected = "";
+		if($cat_id != '')
+		{
+			if( $cat_id == 0 )
+				$selected="selected";
+		}
+
+		$returnValue = '<div class="col-lg-6 col-md-6 col-xm-6">
+							<div class="form-group">
+								<select name="parent_id" class="input_class form-control" id="menucategory" autocomplete="off">
+									<option value=""> Select </option>
+									<option value ="0" '.$selected.'>It is Root Category</option>';
+			
+			$whEre = array(	
+							'parent_id'			=> 0
+						);
+			$nav_query = DB::table('photo_categories')->select('*')->where($whEre)->get();
+			foreach($nav_query as $row)
+			{
+				$selected = "";
+				if($cat_id != '')
+				{
+					if($row->id == $cat_id)
+						$selected="selected";
+				}
+				$returnValue .= '<option value="'.$row->id.'" '.$selected.'><strong>'.$row->title.'</strong></option>';
+
+                                $returnValue .= cat_build_child_one_category($row->id, '', $cat_id);
+			}
+		$returnValue .=    		'</select>
+							</div>
+						</div>';
+
+		return $returnValue;
+	}
+}
+if ( ! function_exists('cat_build_child_one_category'))
+{
+	function cat_build_child_one_category($parent_id, $tempReturnValue, $cat_id)
+	{
+            
+		$tempReturnValue .= $tempReturnValue;
+		$whEre = array(	
+						'parent_id'			=> $parent_id
+						);
+		$nav_query = DB::table('photo_categories')->select('*')->where($whEre)->get();
+		foreach($nav_query as $row)
+		{
+			$selected = "";
+			if($parent_id != '')
+			{
+				if($row->id == $parent_id)
+					$selected="selected";
+			}
+			$tempReturnValue .= '<option value="'.$row->id.'" '.$selected.'><strong>&nbsp;--&nbsp;'.$row->title.'</strong></option>';
+			//$tempReturnValue .= build_child_two($row->id, $tempReturnValueAnother='', $menu_positions);
+		}
+
+		return $tempReturnValue;
+	}
+}
 
 
+if (!function_exists('check_gallery')) {
+	function check_gallery($pid)
+	{
+
+		$fetchResult = DB::table('photo_categories')->where('parent_id', $pid)->exists();
+		return $fetchResult;
+
+	}
+}

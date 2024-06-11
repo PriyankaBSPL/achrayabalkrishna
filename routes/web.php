@@ -9,7 +9,11 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\PublicationController;
+use App\Http\Controllers\Admin\PhotoGallery as photoGallery;
+use App\Http\Controllers\Admin\AjaxController;
 Auth::routes();
+Route::any('/admin/update_gallery_orders', [AjaxController::class, 'update_gallery_orders'])->name('/admin/update_gallery_orders');
+Route::any('/admin/delete_images', [AjaxController::class, 'delete_images'])->name('/admin/delete_images');
 Route::any('pages/{slug}', [IndexController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/celebration', [HomeController::class, 'celebration']);
@@ -33,5 +37,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('/language', LanguageController::class);
     Route::resource('/publication', PublicationController::class);
     Route::resource('/news', NewsController::class);
+    Route::resource('/photoGallery', photoGallery::class);
 });
 });

@@ -55,6 +55,12 @@
              <p>News</p>
            </a>
          </li>
+         <li class="nav-item">
+           <a href="{{url('/admin/photoGallery')}}" class="nav-link">
+             <i class="nav-icon fas fa-th"></i>
+             <p>Gallery</p>
+           </a>
+         </li>
        </ul>
      </nav>
      <!-- /.sidebar-menu -->
