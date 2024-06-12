@@ -10,13 +10,8 @@ use App\Models\Admin\ContactUs;
 use App\Models\Admin\Publication;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
-<<<<<<< HEAD
-
 use App\Models\Admin\News;
 
-=======
-use App\Models\Admin\News;
->>>>>>> 6dc3b6da7f45f17ee9f122dbb85f370ffdf66892
 class HomeController extends Controller
 {
     public function index()
@@ -67,18 +62,8 @@ class HomeController extends Controller
     public function celebration()
     {
         return view('frontend.celebration');
-<<<<<<< HEAD
-    }
-=======
-  }
-  public function news(){
-    $data=News::orderBy('id','desc')->get();
-    return view('frontend.news',compact('data'));
-}
-
     }
 
->>>>>>> 6dc3b6da7f45f17ee9f122dbb85f370ffdf66892
 
     public function contactsave(Request $request)
     {
@@ -115,13 +100,9 @@ class HomeController extends Controller
         return back()->with('success', $msg);
     }
 
-
-<<<<<<< HEAD
     public function news()
     {
         $data = News::orderBy('id', 'desc')->get();
         return view('frontend.news', compact('data'));
     }
-=======
->>>>>>> 6dc3b6da7f45f17ee9f122dbb85f370ffdf66892
 }
