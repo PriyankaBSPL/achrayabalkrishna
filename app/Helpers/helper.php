@@ -347,3 +347,19 @@ if (!function_exists('check_gallery')) {
 
 	}
 }
+if (!function_exists('get_parent_photocat')) {
+	function get_parent_photocat($parent_id)
+	{
+		$count =PhotoCategory::where('parent_id', $parent_id)->get();
+		return count($count);
+	}
+}
+
+if (!function_exists('check_photo_category')) {
+	function check_photo_category($event_id)
+	{
+
+		$fetchResult = DB::table('photo_galleries')->where('event_id', $event_id)->count();
+		return $fetchResult;
+	}
+}

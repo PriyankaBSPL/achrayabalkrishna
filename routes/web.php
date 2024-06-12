@@ -23,9 +23,15 @@ Route::resource('/admin/menu', MenuController::class);
 Route::get('/publication/{slug}/{id}', [HomeController::class, 'publication'])->name('publication');
 Route::get('/book/{id}',  [HomeController::class, 'show'])->name('book.show');
 Route::post('contactsave', [HomeController::class, 'contactsave'])->name('contactsave');
+<<<<<<< HEAD
+Route::any('/gallery',  [HomeController::class, 'gallery']);
+Route::any('/photo_gallery_details/{id}',  [HomeController::class, 'photo_gallery_details']);
+Route::get('/sub_photo_gallery/{id}', [HomeController::class, 'sub_photo_gallery']);
+=======
 
 
 
+>>>>>>> b9172f87c0ff437e895b82621faeece258b72ba6
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
