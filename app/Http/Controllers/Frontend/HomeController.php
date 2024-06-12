@@ -8,9 +8,12 @@ use Illuminate\Http\Request;
 use App\Models\Admin\Language;
 use App\Models\Admin\ContactUs;
 use App\Models\Admin\Publication;
-
+use App\Models\Admin\PhotoCategory;
+use App\Models\Admin\PhotoGallery;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
+
+
 use App\Models\Admin\News;
 class HomeController extends Controller
 {
@@ -106,6 +109,30 @@ class HomeController extends Controller
 
         return back()->with('success', $msg);
     }
+    public function gallery(){
+        $title='Image Gallery';
+        $photocategory_data =  PhotoCategory::where(['parent_id'=> 0])->orderBy('cat_postion', 'ASC')->get();
+        
+        return view('frontend.gallery',compact('title','photocategory_data'));
+    }
+    public function photo_gallery_details($event_id)
+    {
+        $photoCategory = PhotoCategory::find($event_id);
+        $cat_descriptions = $photoCategory->cat_descriptions;
+        $title = $photoCategory->title;
+        $photoGallery = PhotoGallery::where('event_id', $event_id)->orderBy('img_postion', 'ASC')->get();
+        return response()->view("frontend/photo_gallery_details", compact('title', 'photoGallery', 'cat_descriptions'));
+    }
+    public function sub_photo_gallery($parent_id)
+    {
+        $data = '';
+        $photocategory_data =  PhotoCategory::where(['parent_id'=>$parent_id])->get();
+        $title_data =  PhotoCategory::where(['parent_id'=>$parent_id])->get()->first();
+        $cat_descriptions = $title_data->cat_descriptions;
+        $title = $title_data->title;
+        return response()->view("frontend/gallery", compact('title', 'data', 'cat_descriptions', 'photocategory_data'));
+    }
+    
 }
 
 
