@@ -15,22 +15,23 @@ use Illuminate\Support\Facades\Mail;
 
 
 use App\Models\Admin\News;
+
 class HomeController extends Controller
 {
     public function index()
     {
-        $data=News::orderBy('id','desc')->get();
-        return view('frontend.index',compact('data'));
+        $data = News::orderBy('id', 'desc')->get();
+        return view('frontend.index', compact('data'));
     }
 
 
     public function publication($slug, $id, Request $request)
-    { 
+    {
         $languageSelector = $request->input('languageSelector');
         $search = $request->input('search');
 
         $query = Publication::with('menu')->where('publication_type', $id);
-        
+
         if (!empty($search)) {
             $query->where('title', 'LIKE', "%$search%");
         }
@@ -40,17 +41,10 @@ class HomeController extends Controller
         }
 
         $publications = $query->orderBy('id', 'DESC')->get();
-       
-        $SelectLanguages = Language::orderBy('language', 'asc')->pluck('language', 'id');
-        return view('frontend.publication', compact('publications', 'SelectLanguages', 'search', 'languageSelector','slug'));
-    }
 
-    // public function publication($slug, $id)
-    // {
-    //     $publications = Publication::with('menu')->where('publication_type', $id)->orderBy('id', 'DESC')->get();
-    //     $SelectLanguages = Language::pluck('language', 'id');
-    //     return view('frontend.publication', compact('publications', 'SelectLanguages'));
-    // }
+        $SelectLanguages = Language::orderBy('language', 'asc')->pluck('language', 'id');
+        return view('frontend.publication', compact('publications', 'SelectLanguages', 'search', 'languageSelector', 'slug'));
+    }
 
     public function show($id, Request $request)
     {
@@ -66,14 +60,7 @@ class HomeController extends Controller
     public function celebration()
     {
         return view('frontend.celebration');
-  }
-  public function news(){
-    $data=News::orderBy('id','desc')->get();
-    return view('frontend.news',compact('data'));
-}
-
-   
-
+    }
 
     public function contactsave(Request $request)
     {
@@ -95,7 +82,7 @@ class HomeController extends Controller
         $contact->msg = $validatedData['msg'];
         $contact->save();
 
-        
+
         // Sending an email
         $recipient = "zalapriyanka1997@gmail.com";
         Mail::to($recipient)->send(new ContactMail(
@@ -109,6 +96,7 @@ class HomeController extends Controller
 
         return back()->with('success', $msg);
     }
+<<<<<<< HEAD
     public function gallery(){
         $title='Image Gallery';
         $photocategory_data =  PhotoCategory::where(['parent_id'=> 0])->orderBy('cat_postion', 'ASC')->get();
@@ -133,6 +121,12 @@ class HomeController extends Controller
         return response()->view("frontend/gallery", compact('title', 'data', 'cat_descriptions', 'photocategory_data'));
     }
     
+=======
+
+    public function news()
+    {
+        $data = News::orderBy('id', 'desc')->get();
+        return view('frontend.news', compact('data'));
+    }
+>>>>>>> b9172f87c0ff437e895b82621faeece258b72ba6
 }
-
-
