@@ -2,7 +2,7 @@
 @section('content')
 <body>
     <!-- <section class="banner">
-        <img src="assets/img/Awards-banner.jpg" alt="banner" class="img-fluid">
+        <img src="{{URL::asset('frontend/assets/img/Awards-banner.jpg')}}" alt="banner" class="img-fluid">
     </section> -->
 
     <section id="news-updates" class="news-updates">

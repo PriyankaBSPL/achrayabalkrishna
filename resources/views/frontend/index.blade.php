@@ -274,170 +274,28 @@
         <div class="recognize mt-0">
           <div class="wrapper">
             <ul class="owl-carousel">
+             
+            <?php
+            foreach($data as $row){
+            ?>
               <li>
                 <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/1.jpg')}}" class="img-fluid">
+                  <img src="{{URL::asset('admin/uploads/news_image/'.$row->image)}}" class="img-fluid">
                   <div class="card-body">
                     <a href="#">
                       <div>
-                        <p class="card-text">पतंजलि रिसर्च फाउंडेशन और एसआरएम सेंटर फॉर क्लिनिकल ट्रायल्स एंड रिसर्च
-                          चेन्नई
-                          के बीच एमओयू पर हस्ताक्षर</p>
-                        <span>May 6, 2024</span>
+                        <it class="card-text">{!!$row->title!!}</p>
+                       
+                        <span>{{date('F d,Y',strtotime($row->date))}}</span>
                       </div>
                     </a>
                   </div>
                 </div>
               </li>
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/2.jpg')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">Patanjali inks MoU with SRM Centre</p>
-                        <span>May 6, 2024</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/1.jpg')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">Patanjali Research Foundation signs MoU with SSRM CCTR for clinical trial
-                          studies on Ayurvedic medicines</p>
-                        <span>May 6, 2024</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/4.png')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">देश में ऋषि कार्य एवं कृषि कार्य ही प्रगति का आधार: आचार्य बालकृष्ण</p>
-                        <span>May 6, 2024</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/3.jpg')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">
-                          आयुर्वेद के इतिहास में मील का पत्थर साबित होगा यह समझौता: आचार्य बालकृष्ण</p>
-                        <span>May 6, 2024</span>
-                      </div>
-                    </a>
-
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/5.jpg')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">Patanjali Yogpeeth organises yoga and agriculture training camp</p>
-                        <span>May 6, 2024</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/8.jpg')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">Patanjali Research Foundation to study spike protein of Covid’s new
-                          JN.1
-                          variant</p>
-                        <span>January 18, 2024</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/6.webp')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">कोविड के नए वैरिएंट पर अनुसंधान शुरू, बोले आचार्य बालकृष्ण-चीन से मंगाया
-                          गया
-                          स्पाइक प्रोटीन</p>
-                        <span>January 18, 2024</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/9.jpg')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">बात भारत की Confluence : भारत को समझने के लिए वैश्विक स्तर के इतिहास को
-                          समझने की जरूरत – आचार्य बालकृष्ण……</p>
-                        <span>January 18, 2024</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/11.webp')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">पूर्णिमा यूनिवर्सिटी ने आचार्य बालकृष्ण को दी मानद उपाधि:दीक्षांत
-                          समारोह में
-                          पेरेंट्स की मौजूदगी में 665 स्टूडेंट्स को प्रदान की गई डिग्री</p>
-                        <span>December 10, 2023</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="card">
-                  <img src="{{URL::asset('frontend/assets/img/updates/10.jpg')}}" class="img-fluid">
-                  <div class="card-body">
-                    <a href="#">
-                      <div>
-                        <p class="card-text">पूर्णिमा यूनिवर्सिटी ने आचार्य बालकृष्ण को दी मानद उपाधि:दीक्षांत
-                          समारोह में
-                          पेरेंट्स की मौजूदगी में 665 स्टूडेंट्स को प्रदान की गई डिग्री</p>
-                        <span>December 11, 2023</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
+              
+<?php }?>
             </ul>
+            <a href="{{url('/news')}}">Read More</a>
           </div>
         </div>
 

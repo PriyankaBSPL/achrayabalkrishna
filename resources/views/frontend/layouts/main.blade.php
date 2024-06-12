@@ -74,11 +74,12 @@
             <a href="{{($menuItem->slug=='#')?url('#'): url('pages/'.$menuItem->slug) }}"><span>{{ $menuItem->title }}</span></a>
             @if($menuItem->subMenu && $menuItem->subMenu->count() > 0)
                 <ul>
+                    
                     @foreach (getMenuData($menuItem->id) as $child)
                         @if($menuItem->type == 'Publication')
-                        <a href="{{ url('publication/'.$child->slug.'/'.$child->id) }}">{{ $child->title }}</a>
+                        <li> <a href="{{ url('publication/'.$child->slug.'/'.$child->id) }}">{{ $child->title }}</a></li>
                         @else
-                        <a href="{{ ($child->slug=='#')?url('#'):url('pages/'.$child->slug) }}">{{ $child->title }}</a>
+                        <li>  <a href="{{ ($child->slug=='#')?url('#'):url('pages/'.$child->slug) }}">{{ $child->title }}</a></li>
                         @endif
 
                     @endforeach

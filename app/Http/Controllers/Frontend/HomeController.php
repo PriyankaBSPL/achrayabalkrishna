@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Admin\Language;
 use App\Models\Admin\ContactUs;
 use App\Models\Admin\Publication;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Admin\News;
@@ -16,7 +17,8 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $data = News::orderBy('id', 'desc')->get();
+        return view('frontend.index', compact('data'));
     }
 
 
@@ -41,13 +43,6 @@ class HomeController extends Controller
         return view('frontend.publication', compact('publications', 'SelectLanguages', 'search', 'languageSelector', 'slug'));
     }
 
-    // public function publication($slug, $id)
-    // {
-    //     $publications = Publication::with('menu')->where('publication_type', $id)->orderBy('id', 'DESC')->get();
-    //     $SelectLanguages = Language::pluck('language', 'id');
-    //     return view('frontend.publication', compact('publications', 'SelectLanguages'));
-    // }
-
     public function show($id, Request $request)
     {
         $publications = Publication::find($id);
@@ -63,7 +58,6 @@ class HomeController extends Controller
     {
         return view('frontend.celebration');
     }
-
 
     public function contactsave(Request $request)
     {

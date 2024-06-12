@@ -57,8 +57,8 @@
                    
                     <tr>
                     <td>{{$i++}}</td>
-                    <td>{{$row->title}}</td>
-                    <td>{{$row->description}}</td>
+                    <td>{!!$row->title!!}</td>
+                    <td>{!!$row->description!!}</td>
                     <td>{{date('M d,Y',strtotime($row->date))}}</td>
                     <td>
                
