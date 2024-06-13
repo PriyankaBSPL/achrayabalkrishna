@@ -96,7 +96,6 @@ class HomeController extends Controller
 
         return back()->with('success', $msg);
     }
-<<<<<<< HEAD
     public function gallery(){
         $title='Image Gallery';
         $photocategory_data =  PhotoCategory::where(['parent_id'=> 0])->orderBy('cat_postion', 'ASC')->get();
@@ -120,13 +119,9 @@ class HomeController extends Controller
         $title = $title_data->title;
         return response()->view("frontend/gallery", compact('title', 'data', 'cat_descriptions', 'photocategory_data'));
     }
-    
-=======
-
     public function news()
     {
         $data = News::orderBy('id', 'desc')->get();
         return view('frontend.news', compact('data'));
     }
->>>>>>> b9172f87c0ff437e895b82621faeece258b72ba6
 }
