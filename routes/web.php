@@ -14,6 +14,9 @@ use App\Http\Controllers\Admin\VideoGalleryController;
 use App\Http\Controllers\Admin\ResearchPaperController;
 use App\Http\Controllers\Admin\PhotoGallery as photoGallery;
 
+
+use App\Http\Controllers\Admin\AwardController;
+
 Auth::routes();
 Route::any('/admin/update_gallery_orders', [AjaxController::class, 'update_gallery_orders'])->name('/admin/update_gallery_orders');
 Route::any('/admin/delete_images', [AjaxController::class, 'delete_images'])->name('/admin/delete_images');
@@ -25,7 +28,6 @@ Route::resource('/admin/menu', MenuController::class);
 Route::get('/publication/{slug}/{id}', [HomeController::class, 'publication'])->name('publication');
 Route::get('/book/{id}',  [HomeController::class, 'show'])->name('book.show');
 Route::post('contactsave', [HomeController::class, 'contactsave'])->name('contactsave');
-
 
 Route::any('/gallery',  [HomeController::class, 'gallery']);
 Route::any('/photo_gallery_details/{id}',  [HomeController::class, 'photo_gallery_details']);
@@ -42,6 +44,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('/photoGallery', photoGallery::class);
         Route::resource('/year', YearController::class);
         Route::resource('/research-paper', ResearchPaperController::class);
+        Route::resource('/award', AwardController::class);
+
     });
 
 });
