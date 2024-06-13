@@ -11,7 +11,7 @@ use App\Http\Controllers\Admin\PublicationController;
 use App\Http\Controllers\Admin\PhotoGallery as photoGallery;
 use App\Http\Controllers\Admin\AjaxController;
 use App\Http\Controllers\Admin\VideoGalleryController;
-
+use App\Http\Controllers\Admin\AwardController;
 Auth::routes();
 Route::any('/admin/update_gallery_orders', [AjaxController::class, 'update_gallery_orders'])->name('/admin/update_gallery_orders');
 Route::any('/admin/delete_images', [AjaxController::class, 'delete_images'])->name('/admin/delete_images');
@@ -23,15 +23,9 @@ Route::resource('/admin/menu', MenuController::class);
 Route::get('/publication/{slug}/{id}', [HomeController::class, 'publication'])->name('publication');
 Route::get('/book/{id}',  [HomeController::class, 'show'])->name('book.show');
 Route::post('contactsave', [HomeController::class, 'contactsave'])->name('contactsave');
-<<<<<<< HEAD
 Route::any('/gallery',  [HomeController::class, 'gallery']);
 Route::any('/photo_gallery_details/{id}',  [HomeController::class, 'photo_gallery_details']);
 Route::get('/sub_photo_gallery/{id}', [HomeController::class, 'sub_photo_gallery']);
-=======
-
-
-
->>>>>>> b9172f87c0ff437e895b82621faeece258b72ba6
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
@@ -42,6 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('/publication', PublicationController::class);
         Route::resource('/news', NewsController::class);
         Route::resource('/photoGallery', photoGallery::class);
+        Route::resource('/award', AwardController::class);
     });
 
 });
