@@ -55,18 +55,35 @@
              <p>News</p>
            </a>
          </li>
+
          <li class="nav-item">
            <a href="{{url('/admin/photoGallery')}}" class="nav-link">
              <i class="nav-icon fas fa-th"></i>
              <p>Gallery</p>
            </a>
          </li>
+
          <li class="nav-item">
-           <a href="{{url('/admin/award')}}" class="nav-link">
+           <a href="{{url('/admin/year')}}" class="nav-link">
              <i class="nav-icon fas fa-th"></i>
-             <p>Award</p>
+             <p>Year</p>
            </a>
          </li>
+
+         <li class="nav-item">
+           <a href="{{url('/admin/research-paper')}}" class="nav-link">
+             <i class="nav-icon fas fa-th"></i>
+             <p>Research Paper</p>
+           </a>
+         </li>
+
+         <li class="nav-item">
+         <a href="{{url('/admin/award')}}" class="nav-link">
+           <i class="nav-icon fas fa-th"></i>
+           <p>Award</p>
+         </a>
+         </li>
+         
        </ul>
      </nav>
      <!-- /.sidebar-menu -->
