@@ -47,6 +47,20 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label for="category">Category</label>
+                                    <span style="color: red;" class="star">*</span>
+                                    <select name="category" class="input_class form-control" id="category" autocomplete="off">
+                                        <option value="" selected disabled> Select </option>
+                                        @foreach ($SelectCategories as $id => $category)
+                                        <option value="{{ $id }}" {{ $id == old('category', $researchs->category) ? 'selected' : '' }}>
+                                            {{ $category }}
+                                        </option>
+                                        @endforeach
+                                    </select>
+                                    <span class="text-danger">@error('category'){{ $message }}@enderror</span>
+                                </div>
+
+                                <div class="form-group">
                                     <label for="description">Description</label>
                                     <span style="color: red;" class="star">*</span>
                                     <textarea id="summernote" class="summernote" name="description">{{ old('description', $researchs->description) }}</textarea>
@@ -58,7 +72,7 @@
                                     <span style="color: red;" class="star">*</span>
                                     <input type="text" name="link" class="form-control @error('link') is-invalid @enderror" value="{{ old('link', $researchs->link) }}" id="buynow_link">
                                     <span class="text-danger">@error('link'){{$message}}@enderror</span>
-                                </div>   
+                                </div>
 
                                 <button type="submit" class="btn btn-primary">Edit</button>
                                 <a href="{{route('research-paper.index')}}" class="btn btn-primary">Back</a>

@@ -19,6 +19,7 @@
         </div> <!--/.container-fluid  -->
     </section>
 
+
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
@@ -39,11 +40,45 @@
                                 <a href="{{ route('research-paper.create') }}" class="btn btn-success">Add Research Paper</a>
                             </div>
 
+                            <!-- Export data to excel -->
+                            <form method="get" action="{{route('exportToExcel')}}" enctype="multipart/form-data">
+                                @csrf
+                                <div class="row">
+                                    <div class="form-group col-md-3">
+                                        <label for="year">Select Year:</label>
+                                        <select name="year" class="input_class form-control" id="year" autocomplete="off">
+                                            <option value="" selected="" disabled=""> Select </option>
+                                            @foreach ($SelectYears as $id => $year)
+                                            <option value="{{ $id }}" @if(old('year')==$id) selected @endif>{{ $year }}</option>
+                                            @endforeach
+                                        </select>
+                                        <span class="text-danger">@error('year'){{$message}}@enderror</span>
+                                    </div>
+
+                                    <div class="form-group col-md-3">
+                                        <label for="category">Select Category:</label>
+                                        <select name="category" class="input_class form-control" id="category" autocomplete="off">
+                                            <option value="" selected="" disabled=""> Select </option>
+                                            @foreach ($SelectCategories as $id => $category)
+                                            <option value="{{ $id }}" @if(old('category')==$id) selected @endif>{{ $category }}</option>
+                                            @endforeach
+                                        </select>
+                                        <span class="text-danger">@error('category'){{$message}}@enderror</span>
+                                    </div>
+
+                                    <div class="form-group col-md-3" style="margin-top:32px;">
+                                        <button type="submit" class="btn btn-primary">Export to Excel</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
                             <table id="researchtable" name="researchtable" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th>Sr.No.</th>
                                         <th>Year</th>
+                                        <th>Category</th>
                                         <th>Description</th>
                                         <th>Link</th>
                                         <th>Action</th>
@@ -61,6 +96,13 @@
                                             @foreach($SelectYears as $id => $year)
                                             @if($id == $research->year)
                                             {{ $year }}
+                                            @endif
+                                            @endforeach
+                                        </td>
+                                        <td>
+                                            @foreach($SelectCategories as $id => $category)
+                                            @if($id == $research->category)
+                                            {{ $category }}
                                             @endif
                                             @endforeach
                                         </td>

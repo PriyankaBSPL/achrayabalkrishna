@@ -14,6 +14,7 @@ class ResearchPaper extends Model
     protected $fillable =
     [
         'year',
+        'category',
         'description',
         'link'
     ];

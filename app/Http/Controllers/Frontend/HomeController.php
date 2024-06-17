@@ -4,17 +4,20 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Mail\ContactMail;
 use App\Models\Admin\Menu;
+use App\Models\Admin\News;
+use App\Models\Admin\Year;
 use Illuminate\Http\Request;
 use App\Models\Admin\Language;
 use App\Models\Admin\ContactUs;
 use App\Models\Admin\Publication;
-use App\Models\Admin\PhotoCategory;
 use App\Models\Admin\PhotoGallery;
+use App\Models\Admin\PhotoCategory;
+
+
+use App\Models\Admin\ResearchPaper;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
-
-
-use App\Models\Admin\News;
 
 class HomeController extends Controller
 {
@@ -96,16 +99,14 @@ class HomeController extends Controller
 
         return back()->with('success', $msg);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> a729505d1fa9c2537a78ad032a6cf6fb15d89501
     public function gallery(){
         $title='Image Gallery';
         $photocategory_data =  PhotoCategory::where(['parent_id'=> 0])->orderBy('cat_postion', 'ASC')->get();
         
         return view('frontend.gallery',compact('title','photocategory_data'));
     }
+
     public function photo_gallery_details($event_id)
     {
         $photoCategory = PhotoCategory::find($event_id);
@@ -114,6 +115,7 @@ class HomeController extends Controller
         $photoGallery = PhotoGallery::where('event_id', $event_id)->orderBy('img_postion', 'ASC')->get();
         return response()->view("frontend/photo_gallery_details", compact('title', 'photoGallery', 'cat_descriptions'));
     }
+
     public function sub_photo_gallery($parent_id)
     {
         $data = '';
@@ -123,14 +125,53 @@ class HomeController extends Controller
         $title = $title_data->title;
         return response()->view("frontend/gallery", compact('title', 'data', 'cat_descriptions', 'photocategory_data'));
     }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> a729505d1fa9c2537a78ad032a6cf6fb15d89501
     public function news()
     {
         $data = News::orderBy('id', 'desc')->get();
         return view('frontend.news', compact('data'));
     }
+
+    public function research_papers()
+    {
+        $title = 'research paper';
+        $SelectYears = Year::orderBy('year', 'desc')->pluck('year', 'id');
+        $researchs = ResearchPaper::orderBy('id', 'desc')->get();
+        return view('frontend.research-papers', compact('researchs', 'SelectYears', 'title'));
+    }
+
+    public function fetchMoreVideos(Request $request)
+    {
+        $apiKey = env('YOUTUBE_API_KEY');
+        $channelId = env('YOUTUBE_CHANNEL_ID');
+        $maxResults = 12;
+        $nextPageToken = $request->get('nextPageToken');
+    
+        $response = Http::get('https://www.googleapis.com/youtube/v3/search', [
+            'key' => $apiKey,
+            'channelId' => $channelId,
+            'part' => 'snippet,id',
+            'order' => 'date',
+            'maxResults' => $maxResults,
+            'pageToken' => $nextPageToken,
+        ]);
+    
+        $videos = $response->json();
+        $html = '';
+    
+        foreach ($videos['items'] as $video) {
+            $html .= '<div class="col-md-4">
+                        <iframe width="350" height="200" src="https://www.youtube.com/embed/' . $video['id']['videoId'] . '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <h5 class="mt-2">' . $video['snippet']['title'] . '</h5>
+                      </div>';
+        }
+    
+        $data = [
+            'html' => $html,
+            'nextPageToken' => $videos['nextPageToken'] ?? null,
+        ];
+    
+        return response()->json($data);
+    }
+ 
 }

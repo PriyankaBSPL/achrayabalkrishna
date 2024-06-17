@@ -46,12 +46,17 @@
                                     <span class="text-danger">@error('year'){{$message}}@enderror</span>
                                 </div>
 
-                                <!-- <div class="form-group col-md-6">
-                                        <label for="category">Category</label>
-                                        <span style="color: red;" class="star">*</span>
-                                        <input type="text" name="category" class="form-control" id="category" value="{{old('category')}}">
-                                        <span class="text-danger">@error('category'){{$message}}@enderror</span>
-                                    </div> -->
+                                <div class="form-group">
+                                    <label for="category">Category</label>
+                                    <span style="color: red;" class="star">*</span>
+                                    <select name="category" class="input_class form-control" id="category" autocomplete="off">
+                                        <option value="" selected="" disabled=""> Select </option>
+                                        @foreach ($SelectCategories as $id => $category)
+                                        <option value="{{ $id }}" @if(old('category')==$id) selected @endif>{{ $category }}</option>
+                                        @endforeach
+                                    </select>
+                                    <span class="text-danger">@error('category'){{$message}}@enderror</span>
+                                </div>
 
                                 <div class="form-group">
                                     <label for="description">Description</label>

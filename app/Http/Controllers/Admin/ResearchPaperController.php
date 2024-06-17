@@ -6,6 +6,7 @@ use App\Models\Admin\Year;
 use Illuminate\Http\Request;
 use App\Models\Admin\ResearchPaper;
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Category;
 use Illuminate\Support\Facades\Validator;
 
 class ResearchPaperController extends Controller
@@ -18,8 +19,9 @@ class ResearchPaperController extends Controller
         //
         $title = "Research Paper";
         $research = ResearchPaper::orderBy('created_at', 'desc')->get();
-        $SelectYear = Year::orderBy('Year', 'asc')->pluck('year', 'id');
-        return view('admin.research_papers.research_papers', ['researchs' => $research, 'SelectYears' => $SelectYear], compact('title'));
+        $SelectYear = Year::orderBy('Year', 'desc')->pluck('year', 'id');
+        $SelectCategory = Category::orderBy('category', 'asc')->pluck('category', 'id');
+        return view('admin.research_papers.research_papers', ['researchs' => $research, 'SelectYears' => $SelectYear, 'SelectCategories' => $SelectCategory], compact('title'));
     }
 
     /**
@@ -29,8 +31,9 @@ class ResearchPaperController extends Controller
     {
         //
         $title = "Add Research Paper";
-        $SelectYear = Year::orderBy('year', 'asc')->pluck('year', 'id');
-        return view('admin.research_papers.create', ['SelectYears' => $SelectYear], compact('title'));
+        $SelectYear = Year::orderBy('year', 'desc')->pluck('year', 'id');
+        $SelectCategory = Category::orderBy('category', 'asc')->pluck('category', 'id');
+        return view('admin.research_papers.create', ['SelectYears' => $SelectYear, 'SelectCategories' => $SelectCategory], compact('title'));
     }
 
     /**
@@ -40,7 +43,8 @@ class ResearchPaperController extends Controller
     {
         //
         $Validation = [
-            'year' => 'required',     
+            'year' => 'required', 
+            'category' => 'required',       
             'description' => 'required',
             'link' => 'required|url|max:255',
         ];
@@ -52,6 +56,7 @@ class ResearchPaperController extends Controller
             $research = new ResearchPaper();
 
             $research->year = $request->year;
+            $research->category = $request->category;
             $research->description = $request->description;
             $research->link = $request->link;
           
@@ -83,8 +88,9 @@ class ResearchPaperController extends Controller
         //
         $title = "Edit Research paper";
         $research = ResearchPaper::find($id);
-        $SelectYear = Year::orderBy('year', 'asc')->pluck('year', 'id');
-        return view('admin.research_papers.edit', ['researchs' => $research, 'SelectYears' => $SelectYear], compact('title'));
+        $SelectYear = Year::orderBy('year', 'desc')->pluck('year', 'id');
+        $SelectCategory = Category::orderBy('category', 'asc')->pluck('category', 'id');
+        return view('admin.research_papers.edit', ['researchs' => $research, 'SelectYears' => $SelectYear, 'SelectCategories' => $SelectCategory], compact('title'));
     }
 
     /**
@@ -94,7 +100,8 @@ class ResearchPaperController extends Controller
     {
         //
         $validator = Validator::make($request->all(), [
-            'year' => 'required',     
+            'year' => 'required',  
+            'category' => 'required',      
             'description' => 'required',
             'link' => 'required|url|max:255',
         ]);
@@ -108,6 +115,7 @@ class ResearchPaperController extends Controller
             }
 
             $research->year = $request->year;
+            $research->category = $request->category;
             $research->description = $request->description;
             $research->link = $request->link;
 
@@ -144,4 +152,6 @@ class ResearchPaperController extends Controller
             return redirect('admin/research-paper')->with('error', 'Research paper detail not deleted successfully!');
         }
     }
+
+
 }
